@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placo S.A.S</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> <!--Fuente de Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'> <!--Iconos-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--Librera JQuery-->
+</head>
+<body>
+    <header class="header" id="inicio">
+        <div class="contenedor head">
+            <img class="image" src="img/placo.jpg">
+            <h1 class="titulo">Cafe 100% Colombiano</h1>
+            <p class="cuerpoT">Nuestro café proviene de las regiones de Caldas, Quindío y Risarada, mundiamente reconocidas por concentrar un perfil de granos de cualidades únicas.</p>
+        </div>
+    </header>
+    <main> <!--Seccion prncpal del body-->
+        <!--Seccion - Empresa-->
+        <section class="secciones contenedor" id="Nosotros">
+            <h2 class="subtitulo">Nosotros</h2>
+                <!--<img src="img/checklist.svg" alt="">-->
+                <div class="seccion">
+                    <h3 class="numerado">¿Quienes somos?</h3>
+                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
+                </div>
+        </section>
+        <!--Fin Seccion - Empresa-->
+        <!--Seccion - Productos-->
+        <section class="secciones contenedor" id="Productos">
+            <h2 class="subtitulo">Tipos de café</h2>
+            <div class="contenedor-seccion">
+                <!--<img src="img/checklist.svg" alt="">-->
+                <div class="seccion">
+                    <h3 class="numerado"><span class="number">1</span>Tostado</h3>
+                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
+                </div>
+                <div class="seccion">
+                    <h3 class="numerado"><span class="number">2</span>Perfil de sabor</h3>
+                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
+                </div>
+                <div class="seccion">
+                    <h3 class="numerado"><span class="number">3</span>Diseño web</h3>
+                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
+                </div>
+            </div>
+        </section>
+        <!--Fin Seccion - Productos-->
+    </main>
+    <!--Llamado template.html-->
+    <div id="menu-navegacion"> </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>$.get("template.html", function (data){$("#menu-navegacion").replaceWith(data);});</script>
+    <!--Fin Llamado template.html-->
+</body>
+</html>

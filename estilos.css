@@ -18,8 +18,21 @@ body{
     margin: 0px 25px;
     padding: 25px 0;
 }
+.contenedor2{
+    width: 50%;
+    overflow: hidden;
+    padding: 25px 0;
+    margin: auto;
+}
 .header{ /*Fondo*/
     height: 100vh;
+    background-image: url(img/portada.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header2{
+    height: 20vh;
     background-image: url(img/portada.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -77,8 +90,19 @@ body{
 /*Textos*/
 .titulo{
     font-size: 55px;
+    font-weight: 700;
     margin-bottom: 15px;
+    margin-left: 20px;
     color: #260101;
+    text-align: center;
+}
+.titulo2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    color: #260101;
+    text-align: left;
 }
 .cuerpoT{
     font-weight: 400;
@@ -94,6 +118,15 @@ body{
     margin-left: 40px;
     margin-right: 80px;
     width: 60%; /*ancho*/
+}
+.subtitulo2{
+    color: #732F16;
+    font-size: 30px;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    width: 60%;
 }
 .numerado{
     margin-bottom: 7px;
@@ -116,7 +149,6 @@ body{
     margin: 0px 25px;
     padding: 25px 0;
     display: flex;
-    justify-content: row;
 }
 .secciones>img { /*No se esta usando*/
     width: 500px;
@@ -197,3 +229,14 @@ footer{
     color:#732F16;
 }
 /*Fin Footer*/
+/*Lista*/
+.lista{
+    background-color: #732F16;
+    border-color: #732F16;
+    color:#D9BF8F;
+    border-radius: 5px;
+    margin: center;
+    width: 400px;
+    height: 40px;
+    font-size: 18px;
+}

@@ -134,6 +134,15 @@ body{
     margin-left: 40px;
     width: 60%;
 }
+.subtitulo3{
+    color: #732F16;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    width: 60%;
+}
 .numerado{
     margin-bottom: 7px;
     color: #732F16;
@@ -275,6 +284,17 @@ footer{
     width: 300px;
     height: 40px;
     font-size: 18px;
+}
+.block2{
+    background-color: #fff;
+    border-color: #732F16;
+    color:#732F16;
+    border-radius: 5px;
+    margin: center;
+    width: 300px;
+    height: 25px;
+    font-size: 18px;
+    display: block;
 }
 .button{
     background-color: #732F16;

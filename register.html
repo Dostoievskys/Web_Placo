@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="header2" id="inicio">
+        <div class="contenedor head">
+            <h1 class="titulo2">Registro</h1>
+        </div>
+    </header>
+    <section class="contenedor3">
+        <div class="secciones">
+            <FORM class="form" name=form action="TU_PAGINA_WEB.HTML">
+                <P class="subtitulo3">Usuario: 
+                <p class="subtitulo3">Persona <INPUT type=radio name=persona> Empresa <INPUT type=radio name=empresa>
+                <P class="subtitulo3">Nombre: <INPUT class="block2" type=text name=nombre>
+                <P class="subtitulo3">Cedula: <INPUT class="block2" type=text name=cedula>
+                <P class="subtitulo3">Correo:    <INPUT class="block2" type=email name=email> 
+                <P class="subtitulo3">Contraseña: <INPUT class="block2" type=password name=password>
+                <P class="subtitulo3">Telefono: <INPUT class="block2" type=text name=telefono>
+                <P class="subtitulo3">Dirección: <INPUT class="block2" type=text name=direccion>
+                <INPUT onclick=go() class="button" type=button value=Registrar>
+            </FORM>
+        </div>
+    </section>
+    <!--Llamado template.html-->
+    <div id="menu-navegacion"> </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>$.get("template.html", function (data){$("#menu-navegacion").replaceWith(data);});</script>
+    <!--Fin Llamado template.html-->
+</body>
+</html>

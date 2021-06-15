@@ -9,7 +9,8 @@
 /*Header*/
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: #F2EBD5;
+    background-color: #505762;
+    height: 100vh;
 }
 .contenedor{
     width: 50%;
@@ -68,7 +69,7 @@ body{
     top: 10%;
     width: 10vw;
     height: 80%;
-    background-color: #732F16;
+    background-color: #505762;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -80,16 +81,16 @@ body{
     border-radius: 20px;
 }
 .menu-navegacion a{
-    color: #D9BF8F;
+    color: #ffffff;
     text-decoration: none;
 }
 .spread{
     transform: translateX(0);
 }
 .image{
-    width: 30%;
-    border-radius: 50%;
-    margin: 0px 35%; /*Ar/Ab Der/Izq*/
+    width: 50%;
+    /*border-radius: 50%;*/
+    margin: 0px 25%; /*Ar/Ab Der/Izq*/
 }
 /*Fin Header*/
 
@@ -99,7 +100,7 @@ body{
     font-weight: 700;
     margin-bottom: 15px;
     margin-left: 20px;
-    color: #260101;
+    color: #282d41;
     text-align: center;
 }
 .titulo2{
@@ -107,16 +108,16 @@ body{
     font-weight: 600;
     margin-bottom: 15px;
     margin-left: 20px;
-    color: #260101;
+    color: #282d41;
     text-align: left;
 }
 .cuerpoT{
     font-weight: 400;
     font-size: 30px;
-    color: #260101;
+    color: #393e46;
 }
 .subtitulo{
-    color: #732F16;
+    color: #ffffff;
     font-size: 40px;
     text-align: left;
     font-weight: 400;
@@ -126,7 +127,7 @@ body{
     width: 60%; /*ancho*/
 }
 .subtitulo2{
-    color: #732F16;
+    color: #ffffff;
     font-size: 30px;
     text-align: left;
     font-weight: 500;
@@ -135,7 +136,7 @@ body{
     width: 60%;
 }
 .subtitulo3{
-    color: #732F16;
+    color: #ffffff;
     font-size: 18px;
     text-align: left;
     font-weight: 500;
@@ -145,18 +146,18 @@ body{
 }
 .numerado{
     margin-bottom: 7px;
-    color: #732F16;
+    color: #ffffff;
 }
 .descripcion{
     font-weight: 400;
     font-size: 20px;
-    color: #260101;
+    color: #ffffff;
     text-align: justify;
     width: 500px;
     margin: 10px 0px;
 }
 .detalle{
-    color: #732F16;
+    color: #ffffff;
     font-size: 15px;
     text-align: center;
     font-weight: 500;
@@ -165,7 +166,7 @@ body{
     width: 60%;
 }
 a{
-    color: #732F16;
+    color: #ffffff;
 }
 
 /*Seccion*/
@@ -193,20 +194,20 @@ a{
 }
 .number{
     display: inline-block;
-    background-color: #732F16;
+    background-color: #ffffff;
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
     margin-right: 5px;
     width: 30px;
     height: 30px;
-    color: #F2EBD5;
+    color: #505762;
     font-weight: 700;
 }
 /*Fin Seccion*/
 /*Footer*/
 footer{
-    background: #732F16;
+    background: #22252a;
     padding-bottom: 0.1px;
 }
 .footer-content{
@@ -219,11 +220,11 @@ footer{
 }
 .contact-us{
     width: 40%;
-    color: #D9BF8F;
+    color: #f8b500;
 }
 .footer-text{
     width: 20%;
-    color: #D9BF8F;
+    color: #f8b500;
 }
 .brand{
     font-weight: 500;
@@ -242,10 +243,10 @@ footer{
     margin-left: 20px;
     width: 60px;
     height: 60px;
-    border: 1px solid #D9BF8F;
+    border: 1px solid #f8b500;
     border-radius: 50%;
     text-align: center;
-    color: #D9BF8F;
+    color: #f8b500;
 }
 .social-media-icon i{
     font-size: 30px;
@@ -256,12 +257,12 @@ footer{
     max-width: 1200px;
     margin: auto;
     height: 2px;
-    background: #D9BF8F;
+    background: #f8b500;
     margin-bottom: 60px;
 }
 .social-media-icon:hover{
-    background: #D9BF8F;
-    color:#732F16;
+    background: #f8b500;
+    color:#22252a;
 }
 /*Fin Footer*/
 /*Lista*/
@@ -277,8 +278,8 @@ footer{
 }
 .block{
     background-color: #fff;
-    border-color: #732F16;
-    color:#732F16;
+    border-color: #505762;
+    color:#282d41;
     border-radius: 5px;
     margin: center;
     width: 300px;
@@ -287,8 +288,8 @@ footer{
 }
 .block2{
     background-color: #fff;
-    border-color: #732F16;
-    color:#732F16;
+    border-color: #505762;
+    color:#282d41;
     border-radius: 5px;
     margin: center;
     width: 300px;
@@ -297,9 +298,9 @@ footer{
     display: block;
 }
 .button{
-    background-color: #732F16;
-    border-color: #732F16;
-    color:#D9BF8F;
+    background-color: #282d41;
+    border-color: #282d41;
+    color:#fff;
     border-radius: 5px;
     margin: auto;
     width: 300px;
@@ -309,9 +310,9 @@ footer{
     margin-top: 30px;
 }
 .buttonsmall{
-    background-color: #732F16;
-    border-color: #732F16;
-    color:#D9BF8F;
+    background-color: #282d41;
+    border-color: #282d41;
+    color:#fff;
     border-radius: 5px;
     /*margin: auto;*/
     width: 200px;

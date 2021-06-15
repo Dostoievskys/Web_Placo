@@ -15,7 +15,7 @@
     </header>
     <section class="contenedor3">
         <div class="secciones">
-            <img src="img/placo.jpg">
+            <img src="img/bocca.jpg">
             <SCRIPT  language=JavaScript> 
             function go(){
                 if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){ 
@@ -28,12 +28,12 @@
             </SCRIPT> 
             <FORM class="form" name=form action="TU_PAGINA_WEB.HTML">
                 <P class="subtitulo2">Correo:    <INPUT class="block" type=text name=login> 
-                <P class="subtitulo2">Contraseña: <INPUT class="block" type=password name=password> 
+                <P class="subtitulo2">Contraseña: <INPUT class="block" type=password name=password>
                 <INPUT onclick=go() class="button" type=button value=Acceder>
                 <p class="detalle">
                     <a style="text-decoration:none" href="#" >Reestablecer contraseña</a>
                 </p>
-                <INPUT class="buttonsmall" type=button value=Registrarse>
+                <INPUT onclick="location.href='/register.html';" class="buttonsmall" type=button value=Unirse>
             </FORM>
             
         </div>

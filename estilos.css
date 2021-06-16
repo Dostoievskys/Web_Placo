@@ -69,7 +69,7 @@ body{
     top: 10%;
     width: 10vw;
     height: 80%;
-    background-color: #505762;
+    background-color: #22252a;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -375,31 +375,8 @@ footer{
     font-size: 0.9em;
   }
   
-  a {
-    text-decoration: none;
-    color: #2196F3;
-  }
   a:hover {
     text-decoration: underline;
-  }
-  
-  .emoticon-face {
-    background: #FFEB3B;
-    border-radius: 100%;
-    width: 1.7em;
-    height: 1.7em;
-    transform: rotate(90deg);
-    display: inline-block;
-    vertical-align: middle;
-    line-heigh: 1;
-    margin: -0.4em 0.2em 0;
-    text-align: center;
-    border: 1px solid #FDD835;
-    padding-left: 0.1em;
-    -webkit-font-smoothing: antialiased;
-  }
-  .emoticon-face--no-rotation {
-    transform: rotate(0deg);
   }
   
   code {
@@ -421,11 +398,6 @@ footer{
   
   * {
     box-sizing: border-box;
-  }
-  
-  body {
-    color: #777;
-    font-family: "Open Sans", Arial, sans-serif;
   }
   
   .product-grid {
@@ -455,7 +427,7 @@ footer{
     padding: 1rem;
     position: relative;
     cursor: pointer;
-    background: #fff;
+    background: #393e46;
     border-radius: 4px;
   }
   .product-grid__product:hover {
@@ -481,7 +453,7 @@ footer{
     margin-top: 0.875rem;
     display: block;
     font-size: 1.125em;
-    color: #222;
+    color: #ffffff;
     height: 3em;
     overflow: hidden;
     position: relative;
@@ -497,7 +469,7 @@ footer{
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%);
   }
   .product-grid__price {/**color precio**/
-    color: #E91E63;
+    color: #f8b500;
     font-weight: bold;
     letter-spacing: 0.4px;
   }
@@ -510,7 +482,7 @@ footer{
     padding: 0 1rem 1rem 1rem;
     margin: 0.4375rem -1rem 0;
     box-shadow: 0px 0px 0px 1px #eee;
-    background: rgb(75, 40, 12);
+    background: #393e46;
     border-radius: 0 0 4px 4px;
   }
   .product-grid__extend:before {/**color caja extendida**/
@@ -520,12 +492,13 @@ footer{
     position: absolute;
     top: -0.4375rem;
     left: 0;
-    background: rgb(75, 40, 12);
+    background: #393e46;
   }
   .product-grid__description {
     font-size: 0.875em;
     margin-top: 0.4375rem;
     margin-bottom: 0;
+    color: #ffffff;
   }
   .product-grid__btn {
     display: inline-block;
@@ -542,11 +515,12 @@ footer{
     margin-right: 0.3125rem;
   }
   .product-grid__add-to-cart { 
-    color: #fff;
-    background: #E91E63;
+    color: #22252a;
+    font-weight: bold;
+    background: #ffffff;
   }
   .product-grid__add-to-cart:hover {
-    background: #ee4c83;
+    background: #f8b500;
   }
   .product-grid__view { /**color ver mas**/
     color: rgb(119, 119, 119);

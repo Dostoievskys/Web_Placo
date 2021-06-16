@@ -16,32 +16,66 @@
     <section class="contenedor3">
         <div class="secciones">
             <img src="img/bocca.jpg">
-            <SCRIPT  language=JavaScript> 
-            function go(){
-                if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){ 
-                        document.form.submit(); 
+            <script>
+                function go(){
+                    const email = document.querySelector('#email').value;
+                    const password = document.querySelector('#password').value;
+    
+                    firebase.auth().signInWithEmailAndPassword(email, password)
+                        .then((userCredential) => {
+                            console.log('sign up')
+                            document.querySelector('#signInForm').submit();
+                        })
+                        .catch((error) => {
+                            var errorCode = error.code;
+                            var errorMessage = error.message;
+                            console.log(errorMessage)
+                        });
                 } 
-                else{ 
-                    alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
-                } 
-            } 
-            </SCRIPT> 
-            <FORM class="form" name=form action="TU_PAGINA_WEB.HTML">
-                <P class="subtitulo2">Correo:    <INPUT class="block" type=text name=login> 
-                <P class="subtitulo2">Contraseña: <INPUT class="block" type=password name=password>
-                <INPUT onclick=go() class="button" type=button value=Acceder>
+            </script>
+            <form class="form" id="signInForm" action="/index.html">
+                <P class="subtitulo2">Correo:    <INPUT class="block" type=text id="email"> 
+                <P class="subtitulo2">Contraseña: <INPUT class="block" type=password id="password">
+                <input onclick=go() class="button" type=button value=Acceder id="acceder">
                 <p class="detalle">
                     <a style="text-decoration:none" href="#" >Reestablecer contraseña</a>
                 </p>
                 <INPUT onclick="location.href='/register.html';" class="buttonsmall" type=button value=Unirse>
-            </FORM>
-            
+            </form>
         </div>
     </section>
-    <!--Llamado template.html-->
+
+    <!--Llamado template.html
     <div id="menu-navegacion"> </div>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script>$.get("template.html", function (data){$("#menu-navegacion").replaceWith(data);});</script>
-    <!--Fin Llamado template.html-->
+    Fin Llamado template.html-->
+
+    <!--FIREBASE SCRIPTS-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyBGB3dHFcJSDKZOquvZyzTuODwvjKNZgW0",
+        authDomain: "web-placo-f94d8.firebaseapp.com",
+        projectId: "web-placo-f94d8",
+        storageBucket: "web-placo-f94d8.appspot.com",
+        messagingSenderId: "716112899362",
+        appId: "1:716112899362:web:34b0c713a5433699fbc97b",
+        measurementId: "G-21WQ2XFSBJ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    firebase.auth();
+    </script>
 </body>
 </html>

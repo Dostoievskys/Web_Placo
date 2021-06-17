@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio sesión</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="text.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
         <div class="modal modal-close">
             <p class="close">X</p>
             <h2 class="text-modal">Reestablecer contraseña</h2>
-            <p>Se enviara un correo con un enlace de recuperación</p>
+            <p class="modalp">Se enviara un correo con un enlace de recuperación</p>
             <form id="resetForm">
                 <P class="cuerpo-modal">Ingresa tu correo: <input class="block" type=email id="emailR" required>
                 <input class="button" type=button value=Reestablecer id="res">
@@ -42,11 +43,11 @@
         </div>
     </div>
 
-    <!--Llamado template.html
+    <!--Llamado template.html-->
     <div id="menu-navegacion"> </div>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script>$.get("template.html", function (data){$("#menu-navegacion").replaceWith(data);});</script>
-    Fin Llamado template.html-->
+    <!--Fin Llamado template.html-->
 
     <!--FIREBASE SCRIPTS-->
     <!-- The core Firebase JS SDK is always required and must be listed first -->

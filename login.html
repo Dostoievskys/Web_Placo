@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio sesión</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="text.css">
 </head>
+
 <body>
     <header class="header2" id="inicio">
         <div class="contenedor head">
@@ -16,32 +19,63 @@
     <section class="contenedor3">
         <div class="secciones">
             <img src="img/bocca.jpg">
-            <SCRIPT  language=JavaScript> 
-            function go(){
-                if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){ 
-                        document.form.submit(); 
-                } 
-                else{ 
-                    alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
-                } 
-            } 
-            </SCRIPT> 
-            <FORM class="form" name=form action="TU_PAGINA_WEB.HTML">
-                <P class="subtitulo2">Correo:    <INPUT class="block" type=text name=login> 
-                <P class="subtitulo2">Contraseña: <INPUT class="block" type=password name=password>
-                <INPUT onclick=go() class="button" type=button value=Acceder>
+            <form class="form" id="signInForm" action="/index.html">
+                <P class="subtitulo2">Correo: <input class="block" type=email id="email" required>
+                <P class="subtitulo2">Contraseña: <input class="block" type=password id="password" required>
+                <input onclick=go() class="button" type=submit value=Acceder id="acceder">
                 <p class="detalle">
-                    <a style="text-decoration:none" href="#" >Reestablecer contraseña</a>
+                    <a href="#" class="cta">Reestablecer contraseña</a>
                 </p>
-                <INPUT onclick="location.href='/register.html';" class="buttonsmall" type=button value=Unirse>
-            </FORM>
-            
+                <input onclick="location.href='/register.html';" class="buttonsmall" type=button value=Unirse>
+            </form>
         </div>
     </section>
+
+    <div class="modal-container">
+        <div class="modal modal-close">
+            <p class="close">X</p>
+            <h2 class="text-modal">Reestablecer contraseña</h2>
+            <p class="modalp">Se enviara un correo con un enlace de recuperación</p>
+            <form id="resetForm">
+                <P class="cuerpo-modal">Ingresa tu correo: <input class="block" type=email id="emailR" required>
+                <input class="button" type=button value=Reestablecer id="res">
+            </form>
+        </div>
+    </div>
+
     <!--Llamado template.html-->
     <div id="menu-navegacion"> </div>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script>$.get("template.html", function (data){$("#menu-navegacion").replaceWith(data);});</script>
     <!--Fin Llamado template.html-->
+
+    <!--FIREBASE SCRIPTS-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBGB3dHFcJSDKZOquvZyzTuODwvjKNZgW0",
+            authDomain: "web-placo-f94d8.firebaseapp.com",
+            projectId: "web-placo-f94d8",
+            storageBucket: "web-placo-f94d8.appspot.com",
+            messagingSenderId: "716112899362",
+            appId: "1:716112899362:web:34b0c713a5433699fbc97b",
+            measurementId: "G-21WQ2XFSBJ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        firebase.auth();
+    </script>
 </body>
+<script src="/js/modal.js"></script>
+<script src="/js/login.js"></script>
 </html>

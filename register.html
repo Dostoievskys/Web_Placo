@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="text.css">
 </head>
+
 <body>
     <header class="header2" id="inicio">
         <div class="contenedor head">
@@ -17,10 +19,10 @@
     <section class="contenedor3">
         <div class="secciones">
             <img src="img/bocca.jpg">
-            <form class="form" id="signInForm" action="">
+            <form class="form" id="signInForm" action="/login.html">
                 <P class="subtitulo2">Correo: <input class="block" type=email id="email" required>
-                <P class="subtitulo2">Contraseña: <input class="block" type=password id="password" required>
-                <input onclick=register() class="button" type=submit value=Registrar id="registro">
+                    <P class="subtitulo2">Contraseña: <input class="block" type=password id="password" required>
+                        <input onclick=register() class="button" type=submit value=Registrar id="registro">
             </form>
         </div>
     </section>
@@ -28,7 +30,11 @@
     <!--Llamado template.html-->
     <div id="menu-navegacion"> </div>
     <script src="//code.jquery.com/jquery.min.js"></script>
-    <script>$.get("template.html", function (data){$("#menu-navegacion").replaceWith(data);});</script>
+    <script>
+        $.get("template.html", function(data) {
+            $("#menu-navegacion").replaceWith(data);
+        });
+    </script>
     <!--Fin Llamado template.html-->
 
     <!--FIREBASE SCRIPTS-->
@@ -40,6 +46,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
     <script src="/js/firebaseconfig.js"></script>
+    <script src="/js/statusUser.js"></script>
 </body>
 <script src="/js/register.js"></script>
+
 </html>

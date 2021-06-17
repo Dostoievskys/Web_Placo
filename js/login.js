@@ -5,7 +5,7 @@ function go() {
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             console.log('sign up')
-            //document.querySelector('#signInForm').submit();
+            document.querySelector('#signInForm').submit();
         })
         .catch((error) => {
             var errorCode = error.code;
@@ -15,10 +15,10 @@ function go() {
 }
 let res = document.querySelector("#res");
 
-res.addEventListener("click",function(){
+res.addEventListener("click", function() {
     const email = document.querySelector('#emailR').value;
     firebase.auth().sendPasswordResetEmail(email)
-        .then(function () {
+        .then(function() {
             console.log('send email')
             document.querySelector('#resetForm').submit();
         })

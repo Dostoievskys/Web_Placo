@@ -92,6 +92,49 @@ body{
     /*border-radius: 50%;*/
     margin: 0px 25%; /*Ar/Ab Der/Izq*/
 }
+.modal-container{
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgb(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal{
+  width: 40%;
+  height: 50%;
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: transform 1s;
+  transform: translateY(0);
+  border-radius: 10px;
+}
+.close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.modal-close{
+  transform: translateY(200%);
+}
+.cta{
+  text-decoration: none;
+}
 /*Fin Header*/
 
 /*Textos*/
@@ -110,6 +153,17 @@ body{
     margin-left: 20px;
     color: #282d41;
     text-align: left;
+}
+.text-modal{
+  font-size: 30px;
+  font-weight: 600;
+  color: #282d41;
+  text-align: center;
+}
+.cuerpo-modal{
+  font-weight: 400;
+  font-size: 28px;
+  color: #393e46;
 }
 .cuerpoT{
     font-weight: 400;
@@ -167,6 +221,9 @@ body{
 }
 a{
     color: #ffffff;
+}
+p{
+  color: #393e46;
 }
 
 /*Seccion*/

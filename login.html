@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Inicio sesión</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
     <header class="header2" id="inicio">
         <div class="contenedor head">
@@ -16,41 +18,29 @@
     <section class="contenedor3">
         <div class="secciones">
             <img src="img/bocca.jpg">
-            <script>
-                function go(){
-                    const email = document.querySelector('#email').value;
-                    const password = document.querySelector('#password').value;
-    
-                    firebase.auth().signInWithEmailAndPassword(email, password)
-                        .then((userCredential) => {
-                            console.log('sign up')
-                            document.querySelector('#signInForm').submit();
-                        })
-                        .catch((error) => {
-                            var errorCode = error.code;
-                            var errorMessage = error.message;
-                            console.log(errorMessage)
-                        });
-                }
-                function reset(){
-                    const email = document.querySelector('#email').value;
-                    firebase.auth().sendPasswordResetEmail(email)
-                        .then(function() {
-                            console.log('send email')
-                        })
-                }
-            </script>
             <form class="form" id="signInForm" action="/index.html">
-                <P class="subtitulo2">Correo:    <INPUT class="block" type=text id="email"> 
-                <P class="subtitulo2">Contraseña: <INPUT class="block" type=password id="password">
-                <input onclick=go() class="button" type=button value=Acceder id="acceder">
+                <P class="subtitulo2">Correo: <input class="block" type=email id="email" required>
+                <P class="subtitulo2">Contraseña: <input class="block" type=password id="password" required>
+                <input onclick=go() class="button" type=submit value=Acceder id="acceder">
                 <p class="detalle">
-                    <a onclick=reset() style="text-decoration:none" href="#" >Reestablecer contraseña</a>
+                    <a href="#" class="cta">Reestablecer contraseña</a>
                 </p>
-                <INPUT onclick="location.href='/register.html';" class="buttonsmall" type=button value=Unirse>
+                <input onclick="location.href='/register.html';" class="buttonsmall" type=button value=Unirse>
             </form>
         </div>
     </section>
+
+    <div class="modal-container">
+        <div class="modal modal-close">
+            <p class="close">X</p>
+            <h2 class="text-modal">Reestablecer contraseña</h2>
+            <p>Se enviara un correo con un enlace de recuperación</p>
+            <form id="resetForm">
+                <P class="cuerpo-modal">Ingresa tu correo: <input class="block" type=email id="emailR" required>
+                <input class="button" type=button value=Reestablecer id="res">
+            </form>
+        </div>
+    </div>
 
     <!--Llamado template.html
     <div id="menu-navegacion"> </div>
@@ -68,21 +58,23 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
 
     <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyBGB3dHFcJSDKZOquvZyzTuODwvjKNZgW0",
-        authDomain: "web-placo-f94d8.firebaseapp.com",
-        projectId: "web-placo-f94d8",
-        storageBucket: "web-placo-f94d8.appspot.com",
-        messagingSenderId: "716112899362",
-        appId: "1:716112899362:web:34b0c713a5433699fbc97b",
-        measurementId: "G-21WQ2XFSBJ"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    firebase.auth();
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBGB3dHFcJSDKZOquvZyzTuODwvjKNZgW0",
+            authDomain: "web-placo-f94d8.firebaseapp.com",
+            projectId: "web-placo-f94d8",
+            storageBucket: "web-placo-f94d8.appspot.com",
+            messagingSenderId: "716112899362",
+            appId: "1:716112899362:web:34b0c713a5433699fbc97b",
+            measurementId: "G-21WQ2XFSBJ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        firebase.auth();
     </script>
 </body>
+<script src="/js/modal.js"></script>
+<script src="/js/login.js"></script>
 </html>

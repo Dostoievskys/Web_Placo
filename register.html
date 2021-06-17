@@ -16,23 +16,30 @@
     </header>
     <section class="contenedor3">
         <div class="secciones">
-            <FORM class="form" name=form action="TU_PAGINA_WEB.HTML">
-                <P class="subtitulo3">Usuario: 
-                <p class="subtitulo3">Persona <INPUT type=radio name=persona> Empresa <INPUT type=radio name=empresa>
-                <P class="subtitulo3">Nombre: <INPUT class="block2" type=text name=nombre>
-                <P class="subtitulo3">Cedula: <INPUT class="block2" type=text name=cedula>
-                <P class="subtitulo3">Correo:    <INPUT class="block2" type=email name=email> 
-                <P class="subtitulo3">Contraseña: <INPUT class="block2" type=password name=password>
-                <P class="subtitulo3">Telefono: <INPUT class="block2" type=text name=telefono>
-                <P class="subtitulo3">Dirección: <INPUT class="block2" type=text name=direccion>
-                <INPUT onclick=go() class="button" type=button value=Registrar>
-            </FORM>
+            <img src="img/bocca.jpg">
+            <form class="form" id="signInForm" action="">
+                <P class="subtitulo2">Correo: <input class="block" type=email id="email" required>
+                <P class="subtitulo2">Contraseña: <input class="block" type=password id="password" required>
+                <input onclick=register() class="button" type=submit value=Registrar id="registro">
+            </form>
         </div>
     </section>
+
     <!--Llamado template.html-->
     <div id="menu-navegacion"> </div>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script>$.get("template.html", function (data){$("#menu-navegacion").replaceWith(data);});</script>
     <!--Fin Llamado template.html-->
+
+    <!--FIREBASE SCRIPTS-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="/js/firebaseconfig.js"></script>
 </body>
+<script src="/js/register.js"></script>
 </html>

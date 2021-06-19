@@ -19,10 +19,14 @@
     <section class="contenedor3">
         <div class="secciones">
             <img src="img/bocca.jpg">
-            <form class="form" id="signInForm" action="/login.html">
-                <P class="subtitulo2">Correo: <input class="block" type=email id="email" required>
-                    <P class="subtitulo2">Contraseña: <input class="block" type=password id="password" required>
-                        <input onclick=register() class="button" type=submit value=Registrar id="registro">
+            <form class="form" id="signInForm">
+                <input class="buttonradio" type="radio" name="user" value="persona" id="persona" />
+                <label class="subtitulo3" for="persona">Persona</label>
+                <input class="buttonradio" type="radio" name="user" value="empresa" id="empresa" />
+                <label class="subtitulo3" for="empresa">Empresa</label>
+                <P class="subtitulo2">Correo: <input class="block" type=email id="email" required/>
+                <P class="subtitulo2">Contraseña: <input class="block" type=password id="password" required/>
+                <input onclick=register() class="button" type=button value=Registrar id="registro">
             </form>
         </div>
     </section>

@@ -2,11 +2,16 @@ function register() {
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
     console.log('funcion registro')
-    console.log(email, password)
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
             console.log('register')
-            //document.querySelector('#signInForm').submit();
+            if(document.getElementById('persona').checked){
+                document.getElementById("signInForm").action = "/cuentausuario.html";
+            }
+            else{
+                document.getElementById("signInForm").action = "/cuentaempresa.html";
+            }
+            document.querySelector('#signInForm').submit();
         })
         .catch((error) => {
             var errorCode = error.code;

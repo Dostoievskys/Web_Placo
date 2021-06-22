@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="text.css">
-    <link rel="stylesheet" href="catalogo.css">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="stylesheet" href="/css/catalogo.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css?ver=4.4.2'>
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'> <!--Iconos-->
     <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.css'><link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="catalogo2.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--Librera JQuery-->
 </head>
 <body>
@@ -20,21 +20,21 @@
             <h1 class="titulo2">Catalogo</h1>
         </div>
     </header>
-    <main>  
-        <!-- partial:index.partial.html -->
-        <div class="row">     
-                <a class="cart-icon">
-                    <span id="totalItems">0</span>
-                    <ul class="cart"></ul>
-                </a>
-                <div class="productosWrapper large-12 columns">              
-                </div>
+    <main> 
+        <div class="row">
+            <a class="cart-icon">
+                <img id="cart" src="img/cart-solid-84.png">
+                <span id="totalItems">0</span>
+                <ul class="cart"></ul>
+            </a>
+            <div class="productosWrapper large-12 columns">              
             </div>
-        <!-- partial -->
+        </div>
+        <!-- script -->
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?ver=1.11.2'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/spin.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.js'></script><script  src="./script.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.js'></script><script  src="/js/catalogo.js"></script>
     </main>
     <!--Llamado template.html-->
     <div id="menu-navegacion"> </div>

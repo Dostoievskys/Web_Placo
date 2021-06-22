@@ -31,57 +31,97 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
 			{
 				id : 1,
 				img : 'img/bocca.jpg',
-				name : 'BOCCA & PLACO SAS',
+				name : 'Producto 1',
 				price : 299.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				desc : 'Descripcion del producto descripcion de descripcion de', //min 39 caracteres
 				stock : 4
 			},
 			{
 				id : 2,
-				name : 'BOCCA & PLACO SAS',
+				name : 'Producto',
 				img : 'img/bocca.jpg',
 				price : 199.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				desc : 'Descripcion del producto descripcion de',
 				stock : 2
 			},
 			{
 				id : 3,
-				name : 'BOCCA & PLACO SAS',
+				name : 'Producto',
 				img : 'img/bocca.jpg',
 				price : 99.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				desc : 'Descripcion del producto descripcion de',
 				stock : 1
 			},
 			{
 				id : 4,
-				name : 'BOCCA & PLACO SAS',
+				name : 'Producto',
 				img : 'img/bocca.jpg',
 				price : 80.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				desc : 'Descripcion del producto descripcion de',
 				stock : 7
 			},
 			{
 				id : 5,
-				name : 'BOCCA & PLACO SAS',
+				name : 'Producto',
 				img : 'img/bocca.jpg',
 				price : 80.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				desc : 'Descripcion del producto descripcion de',
 				stock : 9
 			},
 			{
 				id : 6,
-				name : 'BOCCA & PLACO SAS',
+				name : 'Producto',
 				img : 'img/bocca.jpg',
 				price : 80.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				desc : 'Descripcion del producto descripcion de',
 				stock : 9
 			},
 			{
 				id : 7,
-				name : 'BOCCA & PLACO SAS',
+				name : 'Producto',
 				img : 'img/bocca.jpg',
 				price : 80.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				desc : 'Descripcion del producto descripcion de',
+				stock : 3
+			},
+			{
+				id : 8,
+				name : 'Producto',
+				img : 'img/bocca.jpg',
+				price : 80.00,
+				desc : 'Descripcion del producto descripcion de',
+				stock : 3
+			},
+			{
+				id : 9,
+				name : 'Producto',
+				img : 'img/bocca.jpg',
+				price : 80.00,
+				desc : 'Descripcion del producto descripcion de',
+				stock : 3
+			},
+			{
+				id : 10,
+				name : 'Producto',
+				img : 'img/bocca.jpg',
+				price : 80.00,
+				desc : 'Descripcion del producto descripcion de',
+				stock : 3
+			},
+			{
+				id : 11,
+				name : 'Producto',
+				img : 'img/bocca.jpg',
+				price : 80.00,
+				desc : 'Descripcion del producto descripcion de',
+				stock : 3
+			},
+			{
+				id : 12,
+				name : 'Producto',
+				img : 'img/bocca.jpg',
+				price : 80.00,
+				desc : 'Descripcion del producto descripcion de',
 				stock : 3
 			}
 		],
@@ -93,16 +133,21 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
 			/*disenio en js de catalogo dinamico */
 			if(productos[i].stock > 0){
 
-				contenido+= '<div class="coin-wrapper">'
-				contenido+= '		<img src="'+productos[i].img+'" alt="'+productos[i].name+'">'
-				contenido+= '		<span class="large-12 columns product-details">'
-				contenido+= '			<h5>'+productos[i].name+' <span class="price">$ '+productos[i].price+' USD</span></h5>'
-				contenido+= '			<h5>STOCK: <span class="stock">'+productos[i].stock+'</span></h5>'
-				contenido+= '		</span>'
-				contenido+= '		<a class="large-12 columns btn submit ladda-button prod-'+productos[i].id+'" data-style="slide-right" onclick="app.addtoCart('+productos[i].id+');">Añadir a la canasta</a>'
-				contenido+= '		<div class="clearfix"></div>'
+				contenido+= '<div class="product-grid__product-wrapper">'
+				contenido+= 	'<div class="product-grid__product">'
+				contenido+=			'<div class="product-grid__img-wrapper">'
+				contenido+= 			'<img src="'+productos[i].img+'" alt="'+productos[i].name+'" class="product-grid__img" />'
+				contenido+= 		'</div>'
+				contenido+= 		'<span class="product-grid__title">'+productos[i].name+'</span>'
+				contenido+= 		'<span class="product-grid__price">'+productos[i].price+' USD</span>'
+				contenido+= 		'<div class="product-grid__extend-wrapper">'
+				contenido+= 			'<div class="product-grid__extend">'
+				contenido+= 				'<p class="product-grid__description">'+productos[i].desc+'</p>'
+				contenido+= 				'<a class="large-12 columns btn submit ladda-button prod-'+productos[i].id+'" data-style="slide-right" onclick="app.addtoCart('+productos[i].id+');">Añadir a la canasta</a>'
+				contenido+= 			'</div>'
+				contenido+= 		'</div>'
+				contenido+= 	'</div>'
 				contenido+= '</div>'
-
 			}
 
 		}
@@ -186,7 +231,7 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
 			   total = total  + (n.cant * n.price)
 			   items += '<li>'
 			   items += '<img src="'+n.img+'" />'
-			   items += '<h3 class="title">'+n.name+'<br><span class="price">'+n.cant+' x $ '+n.price+' USD</span> <button class="add" onclick="app.updateItem('+n.id+','+n.available+')"><i class="icon ion-minus-circled"></i></button> <button onclick="app.deleteProd('+n.id+')" ><i class="icon ion-close-circled"></i></button><div class="clearfix"></div></h3>'
+			   items += '<h3 class="title">'+n.name+'<br><span class="price">'+n.cant+' x $ '+n.price+' USD</span> <!--<button class="add" onclick="app.updateItem('+n.id+','+n.available+')"><i class="icon ion-minus-circled"></i></button>--> <button onclick="app.deleteProd('+n.id+')" ><i class="icon ion-close-circled"></i></button><div class="clearfix"></div></h3>'
 			   items += '</li>'
 			});
 
@@ -273,3 +318,18 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
 	})
 
 })(jQuery)
+
+let abrir = document.querySelector("#cart");
+let car = document.querySelectorAll(".cart")[0];
+
+abrir.addEventListener("click", function(e){
+    e.preventDefault();
+	if(car.style.opacity == 0){
+		car.style.opacity = "1";
+    	car.style.visibility = "visible";
+	}
+	else{
+		car.style.opacity = "0";
+		car.style.visibility = "hidden";
+	}
+});

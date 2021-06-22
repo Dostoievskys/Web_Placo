@@ -42,7 +42,7 @@ body {
 .header {
     /*Fondo*/
     height: 100vh;
-    background-image: url(img/portada.jpg);
+    background-image: url(../img/portada.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -50,7 +50,7 @@ body {
 
 .header2 {
     height: 20vh;
-    background-image: url(img/portada.jpg);
+    background-image: url(../img/portada.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

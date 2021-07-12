@@ -1,0 +1,23 @@
+{
+  "name": "Web_Placo",
+  "version": "1.0.0",
+  "description": "Sistema para la empresa Placo S.A.S",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dostoievskys/Web_Placo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dostoievskys/Web_Placo/issues"
+  },
+  "homepage": "https://github.com/Dostoievskys/Web_Placo#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

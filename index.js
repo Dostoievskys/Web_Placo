@@ -12,5 +12,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/catalogo', (req, res) => {
+    res.sendFile(__dirname + '/static/catalogo.html');
+});
+
+
 app.listen(3000);
 console.log('Web in port 3000');

@@ -17,41 +17,41 @@
 <body>
   <header class="header2" id="inicio">
     <div class="contenedor head">
-      <h1 class="titulo2">Usuario</h1>
+      <h1 class="titulo2">Datos personales</h1>
     </div>
   </header>
   <main>
     <div class="container">
-      <form>
+      <form action="/datosUsuario" method="POST">
         <div class="row">
           <h4> <br>Identificación </h4>
           <div class="input-group input-group-icon">
-            <input type="text" placeholder="Nombre completo" id="name" required/>
+            <input type="text" placeholder="Nombre completo" name="name" required/>
             <div class="input-icon"><box-icon name='user' size="sm" type='solid' color='#282d41' ></box-icon></div> <!-- * Icono-->
           </div>
           <h4> <br>Cédula</h4>
           <div class="input-group input-group-icon">
-            <input type="text" placeholder="ID" id="cedula" required/>
+            <input type="text" placeholder="ID" name="cedula" required/>
             <div class="input-icon"><box-icon name='id-card' size="sm" type='solid' color='#282d41' ></box-icon></div> <!-- * Icono-->
           </div>
           <h4> <br>Correo</h4>
           <div class="input-group input-group-icon">
-            <input type="text" placeholder="Correo" id="email" required/>
+            <input type="text" placeholder="Correo" name="email" required/>
             <div class="input-icon"><box-icon name='envelope' size="sm" type='solid' color='#282d41' ></box-icon></div> <!-- * Icono-->
           </div>
           <h4> <br>Telefono de contacto</h4>
           <div class="input-group input-group-icon">
-            <input type="text" placeholder="Teléfono móvil" id="telefono" required/>
+            <input type="text" placeholder="Teléfono móvil" name="telefono" required/>
             <div class="input-icon"><box-icon name='phone' size="sm" type='solid' color='#282d41' ></box-icon></i></div> <!-- * Icono-->
           </div>
           <h4> <br>Dirección</h4>
           <div class="input-group input-group-icon">
-            <input type="text" placeholder="Dirección" id="direccion" required/>
+            <input type="text" placeholder="Dirección" name="direccion" required/>
             <div class="input-icon"><box-icon name='home' size="sm" type='solid' color='#282d41' ></box-icon></box-icon></div> <!-- * Icono-->
           </div>
           <h4> <br>Número</h4>
           <div class="input-group input-group-icon">
-            <input type="text" placeholder="#Número" id="number" required/>
+            <input type="text" placeholder="#Número" name="number" required/>
             <div class="input-icon"><box-icon name='hash' size="sm" color='#282d41' ></box-icon></box-icon></div> <!-- * Icono-->
           </div>
         </div>
@@ -253,9 +253,9 @@
           <div class="input-group">
             <br>
             <input type="checkbox" id="terms" required/>
-            <label for="terms" style="font-size: 80%;">Acepto los <a class="a" href="/cuenta/usuario/terminos/terms.html" target="_blank">Términos y Condiciones</a> de Bocca y Placo S.A.S, además
+            <label for="terms" style="font-size: 80%;">Acepto los <a class="a" href="/register/user/terms" target="_blank">Términos y Condiciones</a> de Bocca y Placo S.A.S, además
               confirmo que he leído las políticas de privacidad. </label></br>
-            <input onclick=datos() id="guardar" type="button" value="Guardar" />
+            <input name="guardar" type="submit" value="Guardar" />
           </div>
         </div>
       </form>
@@ -269,5 +269,4 @@
   <!--Fin Llamado template.html-->
 </body>
 <!-- <script type="module" src="./mysql.js"></script> -->
-<script src="js/cuenta.js"></script>
 </html>

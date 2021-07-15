@@ -120,8 +120,7 @@ select option {
   color: #fff;
 }
 .input-group {
-  margin-bottom: 1em;
-  zoom: 1;
+  color: #000;
 }
 .input-group:before,
 .input-group:after {
@@ -138,6 +137,7 @@ select option {
   padding-left: 4.4em;
 }
 .input-group-icon .input-icon {
+  margin-top: 4px;
   position: absolute;
   top: 0;
   left: 0;
@@ -153,7 +153,7 @@ select option {
   bottom: 0.6em;
   left: 3.4em;
   display: block;
-  border-right: 1px solid #e5e5e5;
+  /*border-right: 1px solid #e5e5e5;*/
   content: "";
   -webkit-transition: 0.35s ease-in-out;
   -moz-transition: 0.35s ease-in-out;
@@ -181,6 +181,9 @@ select option {
 }
 h4 {
   color: #d8b647;
+}
+.a{
+  color: #000;
 }
 .row:before,
 .row:after {

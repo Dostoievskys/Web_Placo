@@ -1,5 +1,5 @@
-# Web_Placo
-Sistema para la empresa Placo S.A.S 
+# Web Bocca
+Sistema Web para la empresa Placo S.A.S 
 
 ## Desarrolladores 
 
@@ -7,3 +7,15 @@ Sistema para la empresa Placo S.A.S
 + Jennifer Portiño 
 + Diego Tapia 
 + Javier Garrido 
+
+## Entorno
+
+Sistema desarrollado en Windows x64 bits
+
+### Frameworks 
+
+- Firebase 
+- Boostrap 
+- Node.js
+
+## Estructura del proyecto

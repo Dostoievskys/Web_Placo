@@ -19,3 +19,11 @@ Sistema desarrollado en Windows x64 bits
 - Node.js
 
 ## Estructura del proyecto
+
+## Compilacion con Nodemon 
+
+Compilacion continua: 
+- npm run dev
+Detener: 
+- killall -9 node
+- ps ax

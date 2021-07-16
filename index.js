@@ -1,7 +1,7 @@
 // * Se cargan los modulos necesarios
 const express = require('express');
 const bodyParser = require('body-parser');
-const {insertPersona, insertEmpresa} = require('./static/database/mysql');
+const {insertPersona, insertEmpresa, Productos} = require('./static/database/mysql');
 //const path = require('path');
 const app = express(); //Se crea una express app 
 
@@ -16,6 +16,7 @@ app.get('/', (req, res) => { //inicio
 
 app.get('/catalogo', (req, res) => { //catalogo
     res.sendFile(__dirname + '/static/catalogo.html');
+    Productos();
 });
 
 app.get('/contacto', (req, res) => { //contacto
@@ -59,9 +60,6 @@ app.post('/registerdata', (req, res) => { //registro POST
         console.log('Empresa');
         res.redirect('/register/user/empresa');
     }
-    // console.log('Eleccion: ', eleccion);
-    // console.log(cor, pass);
-    // res.send('register data');
 });
 
 app.post('/datosUsuario', (req, res) => {

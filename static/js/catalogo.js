@@ -1,10 +1,9 @@
 var app = window.app || {},
 business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
+import Productos from '../database/mysql.js'
 
 (function($){
 	'use strict';
-
-	//no coflict con underscores
 
 	app.init = function(){
 		//totalItems totalAmount
@@ -27,104 +26,25 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
 	}
 
 	app.createProducts = function(){
-		var productos = [
-			{
-				id : 1,
-				img : 'img/bocca.jpg',
-				name : 'Producto 1',
-				price : 299.00,
-				desc : 'Descripcion del producto descripcion de descripcion de', //min 39 caracteres
-				stock : 4
-			},
-			{
-				id : 2,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 199.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 2
-			},
-			{
-				id : 3,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 99.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 1
-			},
-			{
-				id : 4,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 7
-			},
-			{
-				id : 5,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 9
-			},
-			{
-				id : 6,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 9
-			},
-			{
-				id : 7,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 3
-			},
-			{
-				id : 8,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 3
-			},
-			{
-				id : 9,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 3
-			},
-			{
-				id : 10,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 3
-			},
-			{
-				id : 11,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 3
-			},
-			{
-				id : 12,
-				name : 'Producto',
-				img : 'img/bocca.jpg',
-				price : 80.00,
-				desc : 'Descripcion del producto descripcion de',
-				stock : 3
-			}
-		],
+		var productos = Productos(),
+		// var productos = [
+		// 	{
+		// 		id : 1,
+		// 		img : 'img/bocca.jpg',
+		// 		name : 'Producto 1',
+		// 		price : 299.00,
+		// 		desc : 'Descripcion del producto descripcion de descripcion de', //min 39 caracteres
+		// 		stock : 4
+		// 	},
+		// 	{
+		// 		id : 2,
+		// 		name : 'Producto',
+		// 		img : 'img/bocca.jpg',
+		// 		price : 199.00,
+		// 		desc : 'Descripcion del producto descripcion de',
+		// 		stock : 2
+		// 	}
+		// ],
 		wrapper = $('.productosWrapper'),
 		contenido = ''
 
@@ -142,7 +62,7 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
 				contenido+= 		'<span class="product-grid__price">'+productos[i].price+' USD</span>'
 				contenido+= 		'<div class="product-grid__extend-wrapper">'
 				contenido+= 			'<div class="product-grid__extend">'
-				contenido+= 				'<p class="product-grid__description">'+productos[i].desc+'</p>'
+				contenido+= 				'<p class="product-grid__description">'+productos[i].descripcion+'</p>'
 				contenido+= 				'<a class="large-12 columns btn submit ladda-button prod-'+productos[i].id+'" data-style="slide-right" onclick="app.addtoCart('+productos[i].id+');">Añadir a la canasta</a>'
 				contenido+= 			'</div>'
 				contenido+= 		'</div>'

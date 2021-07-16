@@ -17,4 +17,13 @@ function insertEmpresa(name, nit, email, telefono, direc){
     connection.query(ins,[nit,name,telefono,email,direc]);
 }
 
-module.exports = {connection, insertPersona, insertEmpresa};
+function Productos(){
+    connection.query('SELECT id, name, stock, tostado, sabor, descripcion, price, img FROM producto;',(err,rows) =>{
+        if(err) throw err
+        console.log('los datos son estos:\n')
+        console.log(rows)
+        return rows;
+    })
+}
+
+module.exports = {insertPersona, insertEmpresa, Productos};

@@ -105,6 +105,7 @@ body {
 }
 
 .menu-navegacion a {
+    font-family: 'Spartan', sans-serif;
     color: #ffffff;
     text-decoration: none;
 }

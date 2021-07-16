@@ -1,7 +1,7 @@
 /*Textos*/
 .titulo{
-    font-size: 55px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 500;
     margin-bottom: 15px;
     margin-left: 20px;
     color: #282d41;
@@ -27,15 +27,16 @@
   color: #393e46;
 }
 .cuerpoT{
-    font-weight: 400;
-    font-size: 30px;
+    font-weight: 300;
+    font-size: 28px;
     color: #393e46;
+    padding: 10px ;
 }
 .subtitulo{
     color: #ffffff;
     font-size: 40px;
     text-align: left;
-    font-weight: 400;
+    font-weight: 800;
     margin-bottom: 30px;
     margin-left: 20px;
     margin-right: 80px;

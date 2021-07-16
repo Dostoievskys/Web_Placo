@@ -22,9 +22,9 @@ app.get('/contacto', (req, res) => { //contacto
     res.sendFile(__dirname + '/static/contacto.html');
 });
 
-app.get('/nosotros', (req, res) => { //nosotros
-    res.sendFile(__dirname + '/static/nosotros.html');
-});
+// app.get('/nosotros', (req, res) => { //nosotros
+//     res.sendFile(__dirname + '/static/nosotros.html');
+// });
 
 app.get('/inicioSesion', (req, res) => { //inicio sesion
     res.sendFile(__dirname + '/static/login.html');

@@ -6,9 +6,9 @@
     <title>Placo S.A.S</title>
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/text.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> <!--Fuente de Google-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Fuente de Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'> <!--Iconos-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--Librera JQuery-->
 </head>
@@ -23,34 +23,51 @@
     </header>
     <main> <!--Seccion prncpal del body-->
         <!--Seccion - Empresa-->
-        <section class="sec" id="Nosotros">
-            <h2 class="subtitulo">Nosotros</h2>
-                <!--<img src="img/checklist.svg" alt="">-->
-                <div class="seccion">
-                    <h3 class="numerado">¿Quienes somos?</h3>
-                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                </div>
-        </section>
+        <div hidden> <!-- ! Bloque oculto -->
+            <section class="sec" id="Nosotros"> 
+                <h2 class="subtitulo">Nosotros</h2>
+                    <!--<img src="img/checklist.svg" alt="">-->
+                    <div class="seccion">
+                        <h3 class="numerado">¿Quienes somos?</h3>
+                        <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
+                    </div>
+            </section> 
+        </div> <!-- ! Bloque oculto -->
         <!--Fin Seccion - Empresa-->
         <!--Seccion - Productos-->
-        <section class="sec" id="Productos">
-            <h2 class="subtitulo">Tipos de café</h2>
-            <div class="contenedor-seccion">
-                <!--<img src="img/checklist.svg" alt="">-->
-                <div class="seccion">
-                    <h3 class="numerado"><span class="number">1</span>Tostado</h3>
-                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
+        <div> <!--class="contenedor4"-->
+            <section class="sec" id="Productos">
+                <h2 class="subtitulo">Café <br> Gourmet <br> Artesanal.</h2>
+                <div class="contenedor-seccion">
+                    <!--<img src="img/checklist.svg" alt="">-->
+                    <div class="seccion">
+                        <h3 class="numerado">Ingredientes</h3>
+                        <p class="descripcion"> Contiene: Café 100% Arábigo Colombiano. Variedad Castilla - Naranjal</p>
+                    </div>
+                    <div class="seccion">
+                        <h3 class="numerado">Proceso</h3>
+                        <p class="descripcion">Lavado usando agua pura de las montañas. <br> Secado naturalente al sol.</p>
+                    </div>
+                    <div class="seccion">
+                        <h3 class="numerado">Aroma</h3>
+                        <p class="descripcion">Evoca una fresca mañana campesina con cada preparacion.</p>
+                    </div>
+                    <div class="seccion">
+                        <h3 class="numerado">Notas</h3>
+                        <p class="descripcion">Su sabor balanceado con caracteristicas dulces: panela, chocolate y caramelo.</p>
+                    </div>
+                    <div class="seccion">
+                        <h3 class="numerado">Acidez</h3>
+                        <p class="descripcion">Percibe la refrescante acidez de las notas frutales.</p>
+                    </div>
+                    <div class="seccion">
+                        <h3 class="numerado">Cuerpo</h3>
+                        <p class="descripcion">Disfruta en cada sorbo una experiencia balanceada y delicada</p>
+                    </div>
                 </div>
-                <div class="seccion">
-                    <h3 class="numerado"><span class="number">2</span>Perfil de sabor</h3>
-                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                </div>
-                <div class="seccion">
-                    <h3 class="numerado"><span class="number">3</span>Diseño web</h3>
-                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
+        
         <!--Fin Seccion - Productos-->
     </main>
     <!--Llamado template.html-->

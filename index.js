@@ -6,6 +6,22 @@ const {insertPersona, insertEmpresa, Productos} = require('./static/database/mys
 //const path = require('path');
 const app = express(); //Se crea una express app 
 
+// TODO Firebase *************************************
+var firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/firestore");
+var firebaseConfig = {
+    apiKey: "AIzaSyBGB3dHFcJSDKZOquvZyzTuODwvjKNZgW0",
+    authDomain: "web-placo-f94d8.firebaseapp.com",
+    projectId: "web-placo-f94d8",
+    storageBucket: "web-placo-f94d8.appspot.com",
+    messagingSenderId: "716112899362",
+    appId: "1:716112899362:web:34b0c713a5433699fbc97b",
+    measurementId: "G-21WQ2XFSBJ"
+};
+firebase.initializeApp(firebaseConfig);
+// TODO ***********************************************
+
 // * Elementos que necesita usar la app
 app.use(express.static(__dirname + '/static'));
 app.use(bodyParser.urlencoded({ extended: false })); //extended: false significa que parsea solo string (no archivos de imagenes por ejemplo)
@@ -50,22 +66,30 @@ app.get('/register/user/terms', (req, res) => {
 
 // * Rutas POST
 app.post('/registerdata', (req, res) => { //registro POST
+    //Variables
     const eleccion = req.body.tuser;
-    const cor = req.body.email;
+    const email = req.body.email;
     const pass = req.body.password;
-    let data = JSON.stringify(cor);
-    fs.writeFileSync('./static/js/correo.json', data);
-    if(eleccion == 'persona'){
-        console.log('Persona');
-        res.redirect('/register/user/persona');
-    }
-    if(eleccion == 'empresa'){
-        console.log('Empresa');
-        res.redirect('/register/user/empresa');
-    }
-    else{
-        console.log('Else');
-    }
+    // ? Creacion de JSON 
+    // let data = JSON.stringify(cor);
+    // fs.writeFileSync('./static/js/correo.json', data);
+    firebase.auth().createUserWithEmailAndPassword(email, pass)
+        .then((userCredential) => {
+            console.log('register')
+            if(eleccion == 'persona'){
+                console.log('Persona');
+                res.redirect('/register/user/persona');
+            }
+            if(eleccion == 'empresa'){
+                console.log('Empresa');
+                res.redirect('/register/user/empresa');
+            }
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log('Error: ',errorCode)
+        });
 });
 
 app.post('/datosUsuario', (req, res) => {

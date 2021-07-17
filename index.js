@@ -1,10 +1,10 @@
 // * Se cargan los modulos necesarios
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 const {insertPersona, insertEmpresa, Productos} = require('./static/database/mysql');
 //const path = require('path');
 const app = express(); //Se crea una express app 
-
 
 // * Elementos que necesita usar la app
 app.use(express.static(__dirname + '/static'));
@@ -19,7 +19,6 @@ app.get('/catalogo', (req, res) => { //catalogo
     Productos();
     res.sendFile(__dirname + '/static/catalogo.html');
 });
-
 
 app.get('/contacto', (req, res) => { //contacto
     res.sendFile(__dirname + '/static/contacto.html');
@@ -54,13 +53,18 @@ app.post('/registerdata', (req, res) => { //registro POST
     const eleccion = req.body.tuser;
     const cor = req.body.email;
     const pass = req.body.password;
+    let data = JSON.stringify(cor);
+    fs.writeFileSync('./static/js/correo.json', data);
     if(eleccion == 'persona'){
         console.log('Persona');
         res.redirect('/register/user/persona');
     }
-    else{
+    if(eleccion == 'empresa'){
         console.log('Empresa');
         res.redirect('/register/user/empresa');
+    }
+    else{
+        console.log('Else');
     }
 });
 

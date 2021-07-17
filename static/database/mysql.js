@@ -26,4 +26,4 @@ function Productos(){
     })
 }
 
-module.exports = {insertPersona, insertEmpresa, Productos};
+module.exports = {connection, insertPersona, insertEmpresa, Productos};

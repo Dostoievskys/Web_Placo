@@ -1,9 +1,10 @@
 // * Se cargan los modulos necesarios
 const express = require('express');
 const bodyParser = require('body-parser');
-const {insertPersona, insertEmpresa, Productos} = require('./static/database/mysql');
+const {insertPersona, insertEmpresa} = require('./static/database/mysql');
 //const path = require('path');
 const app = express(); //Se crea una express app 
+
 
 // * Elementos que necesita usar la app
 app.use(express.static(__dirname + '/static'));
@@ -16,7 +17,7 @@ app.get('/', (req, res) => { //inicio
 
 app.get('/catalogo', (req, res) => { //catalogo
     res.sendFile(__dirname + '/static/catalogo.html');
-    Productos();
+    // Productos();
 });
 
 app.get('/contacto', (req, res) => { //contacto

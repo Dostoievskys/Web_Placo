@@ -1,11 +1,12 @@
 /*Textos*/
 .titulo{
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 15px;
     margin-left: 20px;
-    color: #282d41;
+    color: #22252a;
     text-align: center;
+    background-color: #ffffff;
 }
 .titulo2{
     font-family: 'Spartan', sans-serif;
@@ -13,7 +14,7 @@
     font-weight: 600;
     margin-bottom: 15px;
     margin-left: 20px;
-    color: #282d41;
+    color: #ffffff;
     text-align: left;
 }
 .text-modal{
@@ -28,15 +29,17 @@
   color: #393e46;
 }
 .cuerpoT{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 28px;
     color: #393e46;
-    padding: 10px ;
+    padding: 10px;
+    margin-left: 20px;
 }
 .subtitulo{
-    color: #ffffff;
+    color: #282d41;
     font-size: 40px;
     text-align: left;
+    vertical-align: center;
     font-weight: 800;
     margin-bottom: 30px;
     margin-left: 20px;
@@ -62,15 +65,22 @@
 }
 .numerado{
     margin-bottom: 7px;
-    color: #ffffff;
+    color: #282d41;
+    text-align: center;
+}
+.numerado2{
+    margin-bottom: 7px;
+    color: #282d41;
+    text-align: center;
 }
 .descripcion{
     font-weight: 400;
     font-size: 20px;
-    color: #ffffff;
+    color: #282d41;
     text-align: justify;
     width: 500px;
     margin: 10px 0px;
+    line-height: 50px;
 }
 .detalle{
     color: #ffffff;

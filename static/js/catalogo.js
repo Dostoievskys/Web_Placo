@@ -1,6 +1,5 @@
 var app = window.app || {},
 business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
-import Productos from '../database/mysql.js'
 
 (function($){
 	'use strict';
@@ -26,7 +25,7 @@ import Productos from '../database/mysql.js'
 	}
 
 	app.createProducts = function(){
-		var productos = Productos(),
+		var productos = [{}],
 		// var productos = [
 		// 	{
 		// 		id : 1,

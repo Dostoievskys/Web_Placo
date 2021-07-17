@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Spartan', sans-serif;
-    background-color: #505762; /*#505762*/
+    background-color: #ffffff; /*#505762*/
     height: 100vh;
 }
 
@@ -43,24 +43,24 @@ body {
     overflow: hidden;
     padding: 25px 25px;
     margin: 25px 25px;
-    background-color: #505762;
+    background-color: #ffffff;
     border-radius: 5px;
 }
 
 .header {
     /*Fondo*/
     height: 100vh;
-    background-image: url(./portada.jpg); /*portada*/
+    background-image: url(./portada2.jpg); /*portada*/
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-size: cover;
 }
 
 .header2 {
     height: 20vh;
-    background-image: url(./portada.jpg);
+    background-image: url(./portada2.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-size: cover;
 }
 
@@ -89,7 +89,7 @@ body {
 
 .menu-navegacion {
     position: fixed;
-    top: 10%;
+    top: 15%;
     width: 10vw;
     height: 80%;
     background-color: #22252a;
@@ -106,8 +106,9 @@ body {
 
 .menu-navegacion a {
     font-family: 'Spartan', sans-serif;
-    color: #ffffff;
+    color: #f8b500;
     text-decoration: none;
+    font-size: 400;
 }
 
 .spread {
@@ -116,8 +117,11 @@ body {
 
 .image {
     width: 50%;
-    /*border-radius: 50%;*/
+    border-radius: 50%;
     margin: 0px 25%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #282d41;
     /*Ar/Ab Der/Izq*/
 }
 

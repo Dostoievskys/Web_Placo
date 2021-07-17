@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/catalogo.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css?ver=4.4.2'>
     <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'> <!--Iconos-->
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--Librera JQuery-->
@@ -17,15 +18,20 @@
 <body>
     <header class="header2" id="inicio">
         <div class="contenedor head">
-            <h1 class="titulo2">Catalogo</h1>
+            <div class="blockT">
+                <h1 class="titulo2">Catalogo</h1>
+            </div>
         </div>
     </header>
     <main> 
         <div class="row">
-            <a class="cart-icon">
-                <img id="cart" src="img/cart-solid-84.png">
+            <div class="cart-icon" id="cart">
+                <box-icon name='cart' type='solid' color='#f8b500' size="lg"></box-icon>
                 <span id="totalItems">0</span>
                 <ul class="cart"></ul>
+            </div>
+            <!-- src="img/cart-solid-84.png -->
+                
             </a>
             <div class="productosWrapper large-12 columns">              
             </div>

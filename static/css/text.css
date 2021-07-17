@@ -8,14 +8,22 @@
     text-align: center;
     background-color: #ffffff;
 }
+.blockT{
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 350px;
+    text-align: left;
+}
 .titulo2{
     font-family: 'Spartan', sans-serif;
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 15px;
-    margin-left: 20px;
-    color: #ffffff;
-    text-align: left;
+    margin-top: 15px;
+    /* margin-left: 20px; */
+    color: #22252a;
+    text-align: center;
+    /* padding-top: 10px; */
 }
 .text-modal{
   font-size: 30px;

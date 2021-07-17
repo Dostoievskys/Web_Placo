@@ -1,4 +1,5 @@
 const mysql = require('mysql')
+const fs = require('fs');
 
 const connection = mysql.createPool({
     host:'us-cdbr-east-04.cleardb.com',
@@ -20,9 +21,11 @@ function insertEmpresa(name, nit, email, telefono, direc){
 function Productos(){
     connection.query('SELECT id, name, stock, tostado, sabor, descripcion, price, img FROM producto;',(err,rows) =>{
         if(err) throw err
-        console.log('los datos son estos:\n')
+        // console.log('los datos son estos:\n')
         console.log(rows)
-        return rows;
+        let datosjs = rows;
+        let data = JSON.stringify(datosjs);
+        fs.writeFileSync('./static/js/prodDatos.json', data);
     })
 }
 

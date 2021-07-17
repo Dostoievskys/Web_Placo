@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const {insertPersona, insertEmpresa, Productos} = require('./static/database/mysql');
+const {insertPersona, insertEmpresa, Productos, insertUid} = require('./static/database/mysql');
 //const path = require('path');
 const app = express(); //Se crea una express app 
 
@@ -75,13 +75,14 @@ app.post('/registerdata', (req, res) => { //registro POST
     // fs.writeFileSync('./static/js/correo.json', data);
     firebase.auth().createUserWithEmailAndPassword(email, pass)
         .then((userCredential) => {
-            console.log('register')
+            var user = userCredential.user
+            // console.log('u: ',user.uid)
             if(eleccion == 'persona'){
-                console.log('Persona');
+                insertUid(user.uid,'usuario_persona');
                 res.redirect('/register/user/persona');
             }
             if(eleccion == 'empresa'){
-                console.log('Empresa');
+                insertUid(user.uid,'usuario_empresa');
                 res.redirect('/register/user/empresa');
             }
         })
@@ -93,7 +94,6 @@ app.post('/registerdata', (req, res) => { //registro POST
 });
 
 app.post('/datosUsuario', (req, res) => {
-    //let num1=req.body.numero1;
     const name = req.body.name; 
     const cedula = req.body.cedula; 
     const email = req.body.email; 
@@ -101,8 +101,7 @@ app.post('/datosUsuario', (req, res) => {
     const dir = req.body.direccion; 
     const num = req.body.number;
     const direc = dir + " " + num;
-    // const ins = 'INSERT INTO usuario_persona (cedula, nombre, telefono_contacto, correo_contacto, direccion) VALUES($1,$2,$3$,$4,$5)';
-    // connection.query(ins,[cedula,name,telefono,email,direc]);
+    console.log('req: ',req);
     insertPersona(name, cedula, email, telefono, direc);
     console.log(name, cedula, email, telefono, direc);
     res.send('datos enviados');

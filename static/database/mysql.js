@@ -18,6 +18,11 @@ function insertEmpresa(name, nit, email, telefono, direc){
     connection.query(ins,[nit,name,telefono,email,direc]);
 }
 
+function insertUid(uid,Tuser){
+    const ins = 'INSERT INTO '+Tuser+' (uid) VALUES(?)';
+    connection.query(ins,uid);
+}
+
 function Productos(){
     connection.query('SELECT id, name, stock, tostado, sabor, descripcion, price, img FROM producto;',(err,rows) =>{
         if(err) throw err
@@ -29,4 +34,4 @@ function Productos(){
     })
 }
 
-module.exports = {connection, insertPersona, insertEmpresa, Productos};
+module.exports = {connection, insertPersona, insertEmpresa, Productos, insertUid};

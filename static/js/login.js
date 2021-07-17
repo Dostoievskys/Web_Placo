@@ -5,7 +5,16 @@ function go() {
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             console.log('sign up')
-            document.querySelector('#signInForm').submit();
+            user = userCredential;
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                  var uid = user.uid;
+                  console.log('uid: ', uid); //Usuario identificado
+                } else {
+                  // User is signed out
+                }
+              });
+            // document.querySelector('#signInForm').submit();
         })
         .catch((error) => {
             var errorCode = error.code;

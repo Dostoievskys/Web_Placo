@@ -15,9 +15,9 @@
     text-align: left;
 }
 .titulo2{
-    font-family: 'Spartan', sans-serif;
-    font-size: 50px;
-    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
     margin-bottom: 15px;
     margin-top: 15px;
     /* margin-left: 20px; */
@@ -55,7 +55,7 @@
     width: 60%; /*ancho*/
 }
 .subtitulo2{
-    color: #ffffff;
+    color: #282d41;
     font-size: 30px;
     text-align: left;
     font-weight: 500;
@@ -100,7 +100,7 @@
     width: 60%;
 }
 a{
-    color: #ffffff;
+    color: #282d41;
 }
 .modalp{
   color: #393e46;

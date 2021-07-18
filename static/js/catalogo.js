@@ -192,12 +192,10 @@ var carrito;
 		//eso va a generar un formulario dinamico para paypal
 		//con los productos y sus precios
 		var cart = (JSON.parse(localStorage.getItem('cart')) != null) ? JSON.parse(localStorage.getItem('cart')) : {items : []} ;
-		var statics = '<form action="/catalogo/pedido" method="POST"><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="currency_code" value="USD" /><input type="hidden" name="business" value="'+business_paypal+'">',
+		var statics = '<form action="/catalogo/pedido" method="POST"><input type="hidden" name="total" value='+cart.items.length+'><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="currency_code" value="USD" /><input type="hidden" name="business" value="'+business_paypal+'">',
 		dinamic = '',
 		wrapper = $('#submitForm')
 		wrapper.html('')
-		console.log(cart.items);
-		carrito = cart.items;
 		if(undefined != cart && null != cart && cart != ''){
 			var i = 1;
 			_.forEach(cart.items, function(prod, key) {
@@ -209,6 +207,8 @@ var carrito;
 			})
 			statics += dinamic + '<button type="submit" class="pay">&nbsp;Realizar pedido</button></form>' 
 			// &nbsp;
+			console.log('static: ', statics)
+			console.log('cart: ', cart)
 			wrapper.html(statics)
 		}
 	}

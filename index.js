@@ -28,11 +28,39 @@ app.get('/contacto', (req, res) => { //contacto
 // });
 
 app.post('/catalogo/pedido', (req, res) => { //pedido
-    console.log(req.body)
-    // let datosjs = rows;
-    // let data = JSON.stringify(datosjs);
-    // fs.writeFileSync('./static/js/prodDatos.json', data);
+    var Acart = [];
+    var cart = {
+        producto: '',
+        price: '',
+        cant: ''
+    }
+    var Ckeys = Object.keys(req.body)
+    var Cvalues = Object.values(req.body)
+    var total = req.body.total
     
+    for(var j = 1 ; j <= total ; j++){
+        var item = 'item_name_'+j;
+        var amount = 'amount_'+j;
+        var quantity = 'quantity_'+j;
+        for(var i = 5 ; i < Ckeys.length ; i++){
+            if(Ckeys[i] == item){
+                cart.producto = Cvalues[i];
+            }
+            else if(Ckeys[i] == amount){
+                cart.price = Cvalues[i];
+            }
+            else if(Ckeys[i] == quantity){
+                cart.cant = Cvalues[i];
+            }
+            else{
+                // console.log("Carrito Vacio")
+            }
+        }
+        Acart.push(cart);
+    }
+    let data = JSON.stringify(Acart);
+    fs.writeFileSync('./static/js/carrito.json', data);
+
     res.sendFile(__dirname + '/static/pedido.html');
 });
 

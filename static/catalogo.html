@@ -24,10 +24,14 @@
             </div>
         </div>
     </header>
+    <script>
+        cart = windows.location.search
+        console.log(cart);
+    </script>
     <main> 
         <div class="row">
             <div class="cart-icon" id="cart">
-                <box-icon name='cart' type='solid' color='#f8b500' size="lg"></box-icon>
+                <box-icon id="iconCart" name='cart' type='solid' color='#f8b500' size="lg"></box-icon>
                 <span id="totalItems">0</span>
                 <ul class="cart"></ul>
             </div>

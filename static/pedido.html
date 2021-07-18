@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedido</title>
-    <link type="text/css" rel="stylesheet" href="./css/estilos.css">
-    <link type="text/css" rel="stylesheet" href="./css/text.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Fuente de Google-->
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> <!--Fuente de Google Spartan-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet"><!--Fuente de Google Montserrat-->
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'><!--Iconos-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>  <!-- * Iconos-->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--Librera JQuery-->
 </head>
 <body>
     <header class="header2" id="inicio">
@@ -59,14 +58,19 @@
                     <label for="inputZip" class="form-label">Ciudad</label>
                     <input type="text" class="form-control" id="inputZip" placeholder="Santiago">
                 </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">Acepto los <a class="a" href="/catalogo/pedido/user/terms" target="_blank">Términos y Condiciones</a> de Bocca y Placo S.A.S, además
+                        confirmo que he leído las políticas de privacidad. </label>
+                </div>
             </form>
         </div>
         <div class="columna">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Producto 1 <p>2 x 10 USD</p> <img class="Pimagen" src="/static/img/cafe1.jpg" alt=""></li>
-                <li class="list-group-item">Producto 2 <p>1 x 20 USD</p><img class="Pimagen" src="/static/img/cafe1.jpg" alt=""></li>
-                <li class="list-group-item">Producto 3 <p>1 x 50 USD</p><img class="Pimagen" src="/static/img/cafe1.jpg" alt=""></li>
-                <li class="list-group-item">Producto 4 <p>1 x 10 USD</p><img class="Pimagen" src="/static/img/cafe1.jpg" alt=""></li>
+                <li class="list-group-item">Producto 1 <p>2 x 10 USD</p> <img class="Pimagen" src="/img/cafe1.jpg" ></li>
+                <li class="list-group-item">Producto 2 <p>1 x 20 USD</p><img class="Pimagen" src="/img/cafe1.jpg" ></li>
+                <li class="list-group-item">Producto 3 <p>1 x 50 USD</p><img class="Pimagen" src="/img/cafe1.jpg" ></li>
+                <li class="list-group-item">Producto 4 <p>1 x 10 USD</p><img class="Pimagen" src="/img/cafe1.jpg" ></li>
                 <li class="list-group-item">Total: 100 USD</li>
             </ul>
         </div>

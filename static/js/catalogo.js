@@ -192,7 +192,7 @@ var carrito;
 		//eso va a generar un formulario dinamico para paypal
 		//con los productos y sus precios
 		var cart = (JSON.parse(localStorage.getItem('cart')) != null) ? JSON.parse(localStorage.getItem('cart')) : {items : []} ;
-		var statics = '<form action="/catalogo/pedido" method="GET"><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="currency_code" value="USD" /><input type="hidden" name="business" value="'+business_paypal+'">',
+		var statics = '<form action="/catalogo/pedido" method="POST"><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="currency_code" value="USD" /><input type="hidden" name="business" value="'+business_paypal+'">',
 		dinamic = '',
 		wrapper = $('#submitForm')
 		wrapper.html('')
@@ -207,7 +207,7 @@ var carrito;
 					dinamic += '<input type="hidden" name="quantity_'+i+'" value="'+prod.cant+'" />'
 				i++;
 			})
-			statics += dinamic + '<button type="submit" class="pay">Realizar pedido <i class="ion-chevron-right"></i></button></form>' 
+			statics += dinamic + '<button type="submit" class="pay">&nbsp;Realizar pedido</button></form>' 
 			// &nbsp;
 			wrapper.html(statics)
 		}
@@ -221,10 +221,18 @@ var carrito;
 
 })(jQuery)
 
-let abrir = document.querySelector("#cart");
+let abrir = document.querySelector("#iconCart");
 let car = document.querySelectorAll(".cart")[0];
 
 abrir.addEventListener("click", function(e){
-	location.href="/catalogo/pedido?"+carrito;
+	// location.href="/catalogo/pedido";
     e.preventDefault();
+	if(car.style.opacity == 0){
+		car.style.opacity = "1";
+    	car.style.visibility = "visible";
+	}
+	else{
+		car.style.opacity = "0";
+		car.style.visibility = "hidden";
+	}
 });

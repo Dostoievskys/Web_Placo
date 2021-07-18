@@ -23,9 +23,8 @@ app.get('/contacto', (req, res) => { //contacto
     res.sendFile(__dirname + '/static/contacto.html');
 });
 
-app.get('/catalogo/pedido', (req, res) => { //contacto
-    res.send('Pedido de Catalogo');
-    res.sendFile(__dirname + '/static/contacto.html');
+app.get('/catalogo/pedido', (req, res) => { //pedido
+    res.sendFile(__dirname + '/static/pedido2.html');
 });
 
 app.listen(3000);

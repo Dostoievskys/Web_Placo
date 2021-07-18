@@ -2,6 +2,7 @@ import p from './prodDatos.json' assert {type:"json"};
 // var app = window.app || {}, 
 var business_paypal = 'jvpf1409@gmail.com'; // aquí va tu correo electrónico de paypal del cliente
 console.log('Catalogo.js');
+var carrito;
 // console.log(p);
 
 (function($){
@@ -195,6 +196,8 @@ console.log('Catalogo.js');
 		dinamic = '',
 		wrapper = $('#submitForm')
 		wrapper.html('')
+		console.log(cart.items);
+		carrito = cart.items;
 		if(undefined != cart && null != cart && cart != ''){
 			var i = 1;
 			_.forEach(cart.items, function(prod, key) {
@@ -222,13 +225,6 @@ let abrir = document.querySelector("#cart");
 let car = document.querySelectorAll(".cart")[0];
 
 abrir.addEventListener("click", function(e){
+	location.href="/catalogo/pedido?"+carrito;
     e.preventDefault();
-	if(car.style.opacity == 0){
-		car.style.opacity = "1";
-    	car.style.visibility = "visible";
-	}
-	else{
-		car.style.opacity = "0";
-		car.style.visibility = "hidden";
-	}
 });

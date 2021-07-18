@@ -82,14 +82,28 @@
     color: #282d41;
     text-align: center;
 }
+.numerado3{
+    margin-bottom: 7px;
+    color: #fff;
+    text-align: center;
+}
 .descripcion{
     font-weight: 400;
     font-size: 20px;
     color: #282d41;
-    text-align: justify;
-    width: 500px;
+    /* width: 500px; */
     margin: 10px 0px;
     line-height: 50px;
+    text-align: center;
+}
+.descripcion2{
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    /* width: 500px; */
+    margin: 10px 0px;
+    line-height: 50px;
+    text-align: center;
 }
 .detalle{
     color: #ffffff;

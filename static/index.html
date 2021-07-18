@@ -21,60 +21,61 @@
             <p class="cuerpoT">Nuestro café proviene de las regiones de Caldas, Quindío y Risarada, mundiamente reconocidas por concentrar un perfil de granos de cualidades únicas.</p>
         </div>
     </header>
-    <main> <!--Seccion prncpal del body-->
-        <!--Seccion - Empresa-->
-        <div hidden> <!-- ! Bloque oculto -->
-            <section class="sec" id="Nosotros"> 
-                <h2 class="subtitulo">Nosotros</h2>
-                    <!--<img src="img/checklist.svg" alt="">-->
-                    <div class="seccion">
-                        <h3 class="numerado">¿Quienes somos?</h3>
-                        <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
-            </section> 
-        </div> <!-- ! Bloque oculto -->
-        <!--Fin Seccion - Empresa-->
-        <!--Seccion - Productos-->
-        <section class="sec" id="Productos">
-            <h2 class="subtitulo">Café <br> Gourmet <br> Artesanal.</h2>
-            <div class="contenedor-seccion">
-                <!--<img src="img/checklist.svg" alt="">-->
+    <!--Seccion prncpal del body-->
+    <!-- * Seccion - Empresa-->
+    <!-- ! Bloque oculto -->
+    <!-- <div hidden> 
+        <section class="sec" id="Nosotros"> 
+            <h2 class="subtitulo">Nosotros</h2>
                 <div class="seccion">
-                    <h3 class="numerado">Ingredientes</h3>
-                    <p class="descripcion"> Contiene: Café 100% Arábigo Colombiano. Variedad Castilla - Naranjal</p>
+                    <h3 class="numerado">¿Quienes somos?</h3>
+                    <p class="descripcion"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
                 </div>
-                <div class="seccion">
-                    <h3 class="numerado">Proceso</h3>
-                    <p class="descripcion">Lavado usando agua pura de las montañas. <br> Secado naturalente al sol.</p>
-                </div>
-            </div>
-        </section>
-        <section>
+        </section> 
+    </div> -->
+    <!-- * Fin Seccion - Empresa-->
+    <!--Seccion - Productos-->
+    <section class="sec" id="Productos">
+        <h2 class="subtitulo">Café <br> Gourmet <br> Artesanal.</h2>
+        <div class="contenedor-seccion">
+            <!--<img src="img/checklist.svg" alt="">-->
             <div class="seccion">
-                <h3 class="numerado">Aroma</h3>
-                <p class="descripcion">Evoca una fresca mañana campesina con cada preparacion.</p>
-            </div>
-            <div class="seccion">
-                <h3 class="numerado">Notas</h3>
-                <p class="descripcion">Su sabor balanceado con caracteristicas dulces: panela, chocolate y caramelo.</p>
+                <h3 class="numerado">Ingredientes</h3>
+                <p class="descripcion"> Contiene: Café 100% Arábigo Colombiano. Variedad Castilla - Naranjal</p>
             </div>
             <div class="seccion">
-                <h3 class="numerado">Acidez</h3>
-                <p class="descripcion">Percibe la refrescante acidez de las notas frutales.</p>
+                <h3 class="numerado">Proceso</h3>
+                <p class="descripcion">Lavado usando agua pura de las montañas. <br> Secado naturalente al sol.</p>
             </div>
-            <div class="seccion">
-                <h3 class="numerado">Cuerpo</h3>
-                <p class="descripcion">Disfruta en cada sorbo una experiencia balanceada y delicada</p>
-            </div>
-        </section>
-        
-        <!--Fin Seccion - Productos-->
-    </main>
-    <!--Llamado template.html-->
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="seccion">
+            <h3 class="numerado">Aroma</h3>
+            <p class="descripcion">Evoca una fresca mañana campesina con cada preparacion.</p>
+        </div>
+        <div class="seccion">
+            <h3 class="numerado">Notas</h3>
+            <p class="descripcion">Su sabor balanceado con caracteristicas dulces: panela, chocolate y caramelo.</p>
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="seccion">
+            <h3 class="numerado">Acidez</h3>
+            <p class="descripcion">Percibe la refrescante acidez de las notas frutales.</p>
+        </div>
+        <div class="seccion">
+            <h3 class="numerado">Cuerpo</h3>
+            <p class="descripcion">Disfruta en cada sorbo una experiencia balanceada y delicada</p>
+        </div>
+    </section>
+    <!--Fin Seccion - Productos-->
+
+    <!-- * Llamado template.html-->
     <div id="menu-navegacion"> </div>
     <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>$.get("template.html", function (data){$("#menu-navegacion").replaceWith(data);});</script>
-    <!--Fin Llamado template.html-->
+    <!-- * Fin Llamado template.html-->
 </body>
 </html>

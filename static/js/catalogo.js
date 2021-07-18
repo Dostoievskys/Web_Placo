@@ -1,12 +1,12 @@
 import p from './prodDatos.json' assert {type:"json"};
 // var app = window.app || {}, 
-var business_paypal = ''; // aquí va tu correo electrónico de paypal del cliente
+var business_paypal = 'jvpf1409@gmail.com'; // aquí va tu correo electrónico de paypal del cliente
 console.log('Catalogo.js');
 // console.log(p);
 
 (function($){
 	'use strict';
-	function init(){
+	window.init = function init(){
 		//totalItems totalAmount
 		var total = 0,
 		items = 0
@@ -47,7 +47,7 @@ console.log('Catalogo.js');
 		}
 	}
 
-	function createProducts(){
+	window.createProducts = function createProducts(){
 		// var productos = [{}],
 		var productos = p,
 		// var productos = [{
@@ -92,7 +92,7 @@ console.log('Catalogo.js');
 		localStorage.setItem('productos',JSON.stringify(productos))
 	}
 
-	function searchProd(cart,id,cant,name,price,img,available){
+	window.searchProd = function searchProd(cart,id,cant,name,price,img,available){
 		//si le pasamos un valor negativo a la cantidad, se descuenta del carrito
 		var curProd = _.find(cart.items, { 'id': id })
 		if(undefined != curProd && curProd != null){
@@ -115,9 +115,9 @@ console.log('Catalogo.js');
 			cart.items.push(prod)
 		}
 		localStorage.setItem('cart',JSON.stringify(cart))
-		init()
-		getProducts()
-		updatePayForm()
+		window.init()
+		window.getProducts()
+		window.updatePayForm()
 	}
 
 	window.updateItem = function updateItem(id,available){
@@ -137,7 +137,7 @@ console.log('Catalogo.js');
 			}
 	}
 
-	function getProducts(){
+	window.getProducts = function getProducts(){
 		var cart = (JSON.parse(localStorage.getItem('cart')) != null) ? JSON.parse(localStorage.getItem('cart')) : {items : []},
 		msg = '',
 		wrapper = $('.cart'),
@@ -163,7 +163,7 @@ console.log('Catalogo.js');
 		}
 	}
 
-	function del(id){
+	window.del = function del(id){
 		var cart = (JSON.parse(localStorage.getItem('cart')) != null) ? JSON.parse(localStorage.getItem('cart')) : {items : []} ;
 		var curProd = _.find(cart.items, { 'id': id })
 		_.remove(cart.items, curProd);
@@ -187,11 +187,11 @@ console.log('Catalogo.js');
 		}
 	}
 
-	function updatePayForm(){
+	window.updatePayForm = function updatePayForm(){
 		//eso va a generar un formulario dinamico para paypal
 		//con los productos y sus precios
 		var cart = (JSON.parse(localStorage.getItem('cart')) != null) ? JSON.parse(localStorage.getItem('cart')) : {items : []} ;
-		var statics = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="currency_code" value="USD" /><input type="hidden" name="business" value="'+business_paypal+'">',
+		var statics = '<form action="/catalogo/pedido" method="GET"><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="currency_code" value="USD" /><input type="hidden" name="business" value="'+business_paypal+'">',
 		dinamic = '',
 		wrapper = $('#submitForm')
 		wrapper.html('')
@@ -204,15 +204,16 @@ console.log('Catalogo.js');
 					dinamic += '<input type="hidden" name="quantity_'+i+'" value="'+prod.cant+'" />'
 				i++;
 			})
-			statics += dinamic + '<button type="submit" class="pay">Pagar &nbsp;<i class="ion-chevron-right"></i></button></form>'
+			statics += dinamic + '<button type="submit" class="pay">Realizar pedido <i class="ion-chevron-right"></i></button></form>' 
+			// &nbsp;
 			wrapper.html(statics)
 		}
 	}
 	$(document).ready(function(){
-		init()
-		getProducts()
-		updatePayForm()
-		createProducts()
+		window.init()
+		window.getProducts()
+		window.updatePayForm()
+		window.createProducts()
 	})
 
 })(jQuery)

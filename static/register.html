@@ -9,7 +9,20 @@
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="stylesheet" href="/css/text.css">
 </head>
-
+<script>
+    v1 = window.location.search
+    if(v1 != ''){
+        if(vi = '?El%20email%20ya%20esta%20en%20uso'){
+        alert('El email ya esta en uso');
+        }
+        else if(vi = '?Contraseña%20debil'){
+            alert('Contraseña debil');
+        }
+        else{
+            console.log('ok');
+        }
+    }
+</script>
 <body>
     <header class="header2" id="inicio">
         <div class="contenedor head">

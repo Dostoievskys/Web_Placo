@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/text.css">
+</head>
+<script>
+    v1 = window.location.search
+    if(v1 != ''){
+        if(vi = '?El%20email%20ya%20esta%20en%20uso'){
+        alert('El email ya esta en uso');
+        }
+        else if(vi = '?Contraseña%20debil'){
+            alert('Contraseña debil');
+        }
+        else{
+            console.log('ok');
+        }
+    }
+</script>
+<body>
+    <header class="header2" id="inicio">
+        <div class="contenedor head">
+            <div class="blockT">
+                <h1 class="titulo2">REGISTRO</h1>
+            </div>
+        </div>
+    </header>
+    <section class="contenedor3">
+        <div class="secciones">
+            <img class="image2" src="img/bocca2.jpg">
+            <form class="form" id="signInForm" action="/registerdata" method="POST">
+                <input class="buttonradio" type="radio" name="tuser" value="persona" id="persona" required/>
+                <label class="subtitulo3" for="persona">Persona</label>
+                <input class="buttonradio" type="radio" name="tuser" value="empresa" id="empresa" required/>
+                <label class="subtitulo3" for="empresa">Empresa</label>
+                <P class="subtitulo2">Correo: <input class="block" type=email name="email" required/>
+                <P class="subtitulo2">Contraseña: <input class="block" type=password name="password" required/>
+                <input class="button" type=submit value=Registrar id="registro">
+            </form>
+        </div>
+    </section>
+
+    <!--Llamado template.html-->
+    <div id="menu-navegacion"> </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("template.html", function(data) {
+            $("#menu-navegacion").replaceWith(data);
+        });
+    </script>
+    <!--Fin Llamado template.html-->
+
+    <!--FIREBASE SCRIPTS-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+</body>
+</html>

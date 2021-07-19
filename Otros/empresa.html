@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos cuenta</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="/css/cuenta.css">
+  <link rel="stylesheet" href="/css/text.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><!--Librera JQuery-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> <!--Estilo de bloques-->
+  <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>  <!-- * Iconos-->
+</head>
+
+<body>
+  <header class="header2" id="inicio">
+    <div class="contenedor head">
+      <div class="blockT">
+          <h1 class="titulo2">DATOS</h1>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <form action="/datosEmpresa" method="POST">
+        <div class="row">
+          <h4> <br>Identificación </h4>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Nombre completo" name="name" required/>
+            <div class="input-icon"><box-icon name='user' size="sm" type='solid' color='#282d41' ></box-icon></div> <!-- * Icono-->
+          </div>
+          <h4> <br>NIT</h4>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="NIT" name="nit" required/>
+            <div class="input-icon"><box-icon name='id-card' size="sm" type='solid' color='#282d41' ></box-icon></div> <!-- * Icono-->
+          </div>
+          <div hidden> <!-- ! Correo oculto-->
+            <h4> <br>Correo</h4>
+            <div class="input-group input-group-icon">
+              <input type="text" placeholder="Correo" name="email" required/>
+              <div class="input-icon"><box-icon name='envelope' size="sm" type='solid' color='#282d41' ></box-icon></div> <!-- * Icono-->
+            </div>
+          </div> <!-- ! Correo oculto-->
+          <h4> <br>Telefono de contacto</h4>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Teléfono móvil" name="telefono" required/>
+            <div class="input-icon"><box-icon name='phone' size="sm" type='solid' color='#282d41' ></box-icon></i></div> <!-- * Icono-->
+          </div>
+          <h4> <br>Dirección</h4>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Dirección" name="direccion" required/>
+            <div class="input-icon"><box-icon name='home' size="sm" type='solid' color='#282d41' ></box-icon></box-icon></div> <!-- * Icono-->
+          </div>
+          <h4> <br>Número</h4>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="#Número" name="number" required/>
+            <div class="input-icon"><box-icon name='hash' size="sm" color='#282d41' ></box-icon></box-icon></div> <!-- * Icono-->
+          </div>
+        </div>
+
+        <div class="row" hidden> <!-- ! Bloque oculto -->
+          <div class="col-half">
+            <h4>País</h4>
+            <div class="input-group">
+              <select>
+                <option selected="">Seleccione su País</option>
+                <option value="Afganistán">Afganistán</option>
+                <option value="Akrotiri">Akrotiri</option>
+                <option value="Albania">Albania</option>
+                <option value="Alemania">Alemania</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Angola">Angola</option>
+                <option value="Angola">Angola</option>
+                <option value="Antigua y Barbuda">Antigua y Barbuda</option>
+                <option value="Antillas Neerlandesas">Antillas Neerlandesas</option>
+                <option value="Arabia Saudí">Arabia Saudí</option>
+                <option value="Arctic Ocean">Arctic Ocean</option>
+                <option value="Argelia">Argelia</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaiyán">Azerbaiyán</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahráin">Bahráin</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Bélgica">Bélgica</option>
+                <option value="Belice">Belice</option>
+                <option value="Benín">Benín</option>
+                <option value="Bermudas">Bermudas</option>
+                <option value="Bielorrusia">Bielorrusia</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Botsuana">Botsuana</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Brunéi">Brunéi</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Bután">Bután</option>
+                <option value="Cabo Verde">Cabo Verde</option>
+                <option value="Camboya">Camboya</option>
+                <option value="Camerún">Camerún</option>
+                <option value="Canadá">Canadá</option>
+                <option value="Chad">Chad</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Chipre">Chipre</option>
+                <option value="Clipperton Island">Clipperton Island</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Comoras">Comoras</option>
+                <option value="Congo">Congo</option>
+                <option value="Coral Sea Islands">Coral Sea Islands</option>
+                <option value="Corea del Norte">Corea del Norte</option>
+                <option value="Corea del Sur">Corea del Sur</option>
+                <option value="Costa de Marfil">Costa de Marfil</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Croacia">Croacia</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Dhekelia">Dhekelia</option>
+                <option value="Dinamarca">Dinamarca</option>
+                <option value="Dominica">Dominica</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Egipto">Egipto</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="El Vaticano">El Vaticano</option>
+                <option value="Emiratos Árabes Unidos">Emiratos Árabes Unidos</option>
+                <option value="Eritrea">Eritrea</option>
+                <option value="Eslovaquia">Eslovaquia</option>
+                <option value="España">España</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Etiopía">Etiopía</option>
+                <option value="Filipinas">Filipinas</option>
+                <option value="Finlandia">Finlandia</option>
+                <option value="Francia">Francia</option>
+                <option value="Gabón">Gabón</option>
+                <option value="Gambia">Gambia</option>
+                <option value="Gaza Strip">Gaza Strip</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Gibraltar">Gibraltar</option>
+                <option value="Granada">Granada</option>
+                <option value="Grecia">Grecia</option>
+                <option value="Groenlandia">Groenlandia</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Guinea">Guinea</option>
+                <option value="Guyana">Guyana</option>
+                <option value="Haití">Haití</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="Hungría">Hungría</option>
+                <option value="India">India</option>
+                <option value="Indian Ocean">Indian Ocean</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Irán">Irán</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Irlanda">Irlanda</option>
+                <option value="Isla Bouvet">Isla Bouvet</option>
+                <option value="Isla Christmas">Isla Christmas</option>
+                <option value="Israel">Israel</option>
+                <option value="Italia">Italia</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Japón">Japón</option>
+                <option value="Jersey">Jersey</option>
+                <option value="Jordania">Jordania</option>
+                <option value="Kazajistán">Kazajistán</option>
+                <option value="Kenia">Kenia</option>
+                <option value="Kirguizistán">Kirguizistán</option>
+                <option value="Libia">Libia</option>
+                <option value="Lituania">Lituania</option>
+                <option value="Luxemburgo">Luxemburgo</option>
+                <option value="Macao">Macao</option>
+                <option value="Macedonia">Macedonia</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Malasia">Malasia</option>
+                <option value="Malaui">Malaui</option>
+                <option value="Maldivas">Maldivas</option>
+                <option value="Malí">Malí</option>
+                <option value="Marruecos">Marruecos</option>
+                <option value="México">México</option>
+                <option value="Moldavia">Moldavia</option>
+                <option value="Mónaco">Mónaco</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Mozambique">Mozambique</option>
+                <option value="Nepalv">Nepalv</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Níger">Níger</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Noruega">Noruega</option>
+                <option value="Nueva Caledonia">Nueva Caledonia</option>
+                <option value="Nueva Zelanda">Nueva Zelanda</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="Polonia">Polonia</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Reino Unido">Reino Unido</option>
+                <option value="República Checa">República Checa</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Ruanda">Ruanda</option>
+                <option value="Rumania">Rumania</option>
+                <option value="Rusia">Rusia</option>
+                <option value="Senegal">Senegal</option>
+                <option value="Singapur">Singapur</option>
+                <option value="Siria">Siria</option>
+                <option value="Somalia">Somalia</option>
+                <option value="Sudán">Sudán</option>
+                <option value="Suecia">Suecia</option>
+                <option value="Suiza">Suiza</option>
+                <option value="Tailandia">Tailandia</option>
+                <option value="Taiwán">Taiwán</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Tayikistán">Tayikistán</option>
+                <option value="Trinidad y Tobago">Trinidad y Tobago</option>
+                <option value="Túnez">Túnez</option>
+                <option value="Turquía">Turquía</option>
+                <option value="Ucrania">Ucrania</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Yemen">Yemen</option>
+              </select>
+            </div>
+          </div>
+        </div> <!-- ! Bloque oculto -->
+        
+        <div class="row">
+          <div class="input-group">
+            <br>
+            <input type="checkbox" id="terms" required/>
+            <label for="terms" style="font-size: 80%;">Acepto los <a class="a" href="/register/user/terms" target="_blank">Términos y Condiciones</a> de Bocca y Placo S.A.S, además
+              confirmo que he leído las políticas de privacidad. </label></br>
+            <input name="guardar" type="submit" value="Guardar" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <!--Llamado template.html-->
+  <div id="menu-navegacion"> </div>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script>$.get("template.html", function (data) { $("#menu-navegacion").replaceWith(data); });</script>
+  <!--Fin Llamado template.html-->
+</body>
+
+</html>

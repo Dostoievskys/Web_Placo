@@ -26,57 +26,56 @@
         cart = window.location.search
         console.log(cart);
     </script>
-    <div class="fila">
-        <div class="columna"> <!--Formulario Datos-->
-            <form class="row g-3">
-                <label for="inputEmail4" class="form-label">Datos envio</label>
-                <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Nombre completo">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Correo</label>
-                  <input type="email" class="form-control" id="inputPassword4" placeholder="example@example.com">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Cedula</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="ID">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Telefono/Celular</label>
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="123456789">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputAddress" class="form-label">Direccion</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Nombre calle">
-                </div>
-                <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Numero</label>
-                    <input type="number" class="form-control" id="inputZip" placeholder="#123">
-                </div>
-                <div class="col-md-4">
-                    <label for="inputZip" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="inputZip" placeholder="Santiago">
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">Acepto los <a class="a" href="/catalogo/pedido/user/terms" target="_blank">Términos y Condiciones</a> de Bocca y Placo S.A.S, además
-                        confirmo que he leído las políticas de privacidad. </label>
-                </div>
-            </form>
+        <div class="fila">
+            <div class="columna"> <!--Formulario Datos-->
+                <form class="row g-3" id="datos" action="" method="POST"> <!--class="row g-3"-->
+                    <label for="inputEmail4" class="form-label">Datos envio</label>
+                    <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="correo" placeholder="example@example.com" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Cedula</label>
+                        <input type="text" class="form-control" id="cedula" placeholder="ID" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Telefono/Celular</label>
+                        <input type="text" class="form-control" id="telefono" placeholder="123456789" required>
+                    </div>
+                    <div class="col-md-6">
+                    <label for="inputAddress" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="direccion" placeholder="Nombre calle" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputZip" class="form-label">Numero</label>
+                        <input type="number" class="form-control" id="numero" placeholder="#123" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="inputZip" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="ciudad" placeholder="Santiago" required>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                        <label class="form-check-label" for="flexCheckDefault">Acepto los <a class="a" href="/catalogo/pedido/user/terms" target="_blank">Términos y Condiciones</a> de Bocca y Placo S.A.S, además
+                            confirmo que he leído las políticas de privacidad. </label>
+                    </div>
+                    <button style="width: 30%; font-size: 18px; font-weight: bold; background-color: #f8b500; color: #282d41; border-color: #f8b500; margin: 2% 5% 2% 5%;" type="button" onclick=dataSave() class="btn btn-primary">Confirmar datos</button>
+                    <button style="width: 30%; font-size: 18px; font-weight: bold; background-color: #f8b500; color: #282d41; border-color: #f8b500; margin: 2% 5% 2% 5%;" type="button" onclick=dataEdit() class="btn btn-primary">Editar</button>
+                </form>
+            </div>
+            <div class="columna">
+                <ul class="list-group list-group-flush">
+                    <!--Aqui va el Carrito dinamico-->
+                </ul>
+            </div>
         </div>
-        <div class="columna">
-            <ul class="list-group list-group-flush">
-                <!-- <li class="list-group-item">Producto 1 <p>2 x 10 USD</p> <img class="Pimagen" src="/img/cafe1.jpg" ></li>
-                <li class="list-group-item">Producto 2 <p>1 x 20 USD</p><img class="Pimagen" src="/img/cafe1.jpg" ></li>
-                <li class="list-group-item">Producto 3 <p>1 x 50 USD</p><img class="Pimagen" src="/img/cafe1.jpg" ></li>
-                <li class="list-group-item">Producto 4 <p>1 x 10 USD</p><img class="Pimagen" src="/img/cafe1.jpg" ></li>
-                <li class="list-group-item">Total: 100 USD</li> -->
-            </ul>
-        </div>
-    </div>
-    <button style="width: 30%; font-size: 25px; font-weight: bold; background-color: #f8b500; color: #282d41; border-color: #f8b500; margin: 2% 0px 5% 35%;" type="submit" class="btn btn-primary">Pagar</button>
-
+        <button style="width: 30%; font-size: 25px; font-weight: bold; background-color: #f8b500; color: #282d41; border-color: #f8b500; margin: 2% 0px 5% 35%;" type="submit" form="compra" class="btn btn-primary">Pagar con Paypal</button>
+    
+    
     <footer id="footer">
         <div class="contenedor footer-content">
             <div class="contact-us">
@@ -97,5 +96,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/spin.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.js'></script>
     <script type="module" src="/js/pedido.js"></script>
+    <script src="/js/pedido2.js"></script>
 </body>
 </html>

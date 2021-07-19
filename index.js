@@ -68,5 +68,9 @@ app.get('/catalogo/pedido/user/terms', (req, res) => {
     res.sendFile(__dirname + '/static/terminos/terms.html');
 });
 
+app.get('/catalogo/pedido/PagoRealizado', (req, res) => {
+    res.sendFile(__dirname + '/static/recibo.html');
+});
+
 app.listen(3000);
 console.log('Web in port 3000');
